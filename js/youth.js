@@ -15,11 +15,11 @@
 
 
   /* ---------- 1. VIDEO ----------
-     Only loads on wider screens, and not for people who've asked
-     for less motion or less data. Everyone else sees the poster. */
+     Not loaded for people who've asked for less motion or less
+     data (data-saver); they see the poster image instead. */
   var video = document.getElementById("youthVideo");
   var saveData = navigator.connection && navigator.connection.saveData;
-  if (video && !reduceMotion && !saveData && window.matchMedia("(min-width: 760px)").matches) {
+  if (video && !reduceMotion && !saveData) {
     video.src = video.getAttribute("data-src");
     var p = video.play();
     if (p && p.catch) p.catch(function () {});   // autoplay blocked: the poster stays

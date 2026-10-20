@@ -74,6 +74,9 @@
       setChoice(choice);
       if (choice === "granted") loadAnalytics(); else stopAnalytics();
       banner.hidden = true;
+      if (window.mvToast) window.mvToast(choice === "granted"
+        ? "Thanks! Analytics is on. You can change this any time in Cookie settings."
+        : "Analytics is off. Nothing is sent to Google.", "success");
     });
     document.body.appendChild(banner);
   }

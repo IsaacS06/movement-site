@@ -1,36 +1,8 @@
 /* ============================================================
    MOVEMENT CHURCH - ABOUT PAGE
-   Fades each .reveal block up as it scrolls into view.
-   Without this file everything simply shows straight away.
+   (The fade-in-on-scroll that used to live here is now in
+   js/scroll.js, which runs on every page.)
    ============================================================ */
-
-(function () {
-  "use strict";
-
-  var reduceMotion = window.matchMedia &&
-    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduceMotion || !("IntersectionObserver" in window)) return;
-
-  /* style.css only hides .reveal blocks once this class is on <html> */
-  document.documentElement.classList.add("js");
-
-  var watcher = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      var el = entry.target;
-      el.classList.add("is-in");
-      watcher.unobserve(el);                 // only animate once
-      setTimeout(function () { el.style.transitionDelay = ""; }, 1000);  // so hovers aren't delayed later
-    });
-  }, { rootMargin: "0px 0px -8% 0px" });
-
-  var blocks = document.querySelectorAll(".reveal");
-  for (var i = 0; i < blocks.length; i++) {
-    /* cards in the same row arrive one after another */
-    blocks[i].style.transitionDelay = (i % 3) * 80 + "ms";
-    watcher.observe(blocks[i]);
-  }
-})();
 
 
 /* ============================================================

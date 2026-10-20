@@ -33,7 +33,8 @@
 <script>try{var TEST=false,d=document.documentElement,calm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!calm)d.classList.add("word-tick");if((TEST||!sessionStorage.getItem("mvIntro"))&&!calm){d.classList.add("has-intro","intro-wait");sessionStorage.setItem("mvIntro","1")}}catch(e){}</script>
 
 <!-- Styles -->
-<link rel="stylesheet" href="css/style.css">
+<!-- bump the ?v= number after changing style.css so browsers fetch the new version -->
+<link rel="stylesheet" href="css/style.css?v=7">
 <!-- Structured data for search engines -->
 <script type="application/ld+json">
 {
@@ -135,7 +136,8 @@
     </div>
   </div>
   <div class="give-hero-img">
-    <img src="img/visit-arrive.jpg" alt="A family walking in through the front doors at Movement Church">
+    <!-- drone flyover of downtown Woodstock (silent loop, as on the old site) -->
+    <video class="hero-video" data-loop autoplay muted loop playsinline poster="media/visit-loop.jpg" aria-label="Drone flyover of downtown Woodstock with the Movement Church logo"><source src="media/visit-loop.mp4" type="video/mp4"></video>
     <span class="give-sticker">Parking is <b>free</b></span>
   </div>
 </header>
@@ -232,17 +234,25 @@
 
 
 <!-- ==========================================================
-     PLAN YOUR VISIT
+     PLAN YOUR VISIT - the Sunday video (plays with sound when pressed)
+     over a silent background clip, as on the old site
      ========================================================== -->
-<section class="sec shell">
-  <div class="final">
-    <div>
-      <span class="kick final-kick">Plan your visit</span>
+<section class="ready">
+  <video class="ready-bg" data-loop autoplay muted loop playsinline poster="media/home-visit-loop.jpg" aria-hidden="true"><source src="media/home-visit-loop.mp4" type="video/mp4"></video>
+  <div class="ready-in shell">
+    <div class="ready-txt reveal">
+      <span class="kick">Plan your visit</span>
       <h2>Ready to come to a gathering?</h2>
       <p>Our team is here to answer any questions you may have and help make your visit smooth and comfortable. Fill out the form so we can connect with you &mdash; we can&rsquo;t wait to meet you!</p>
+      <div class="final-btns">
+        <a class="pill pill--hot" href="https://wearemovement.churchcenter.com/people/forms/989717">Plan a visit</a>
+      </div>
     </div>
-    <div class="final-btns">
-      <a class="pill" href="https://wearemovement.churchcenter.com/people/forms/989717">Plan a visit</a>
+    <div class="ready-film reveal">
+      <video class="film" data-autoplay data-sound muted loop controls preload="none" playsinline poster="media/sunday-film.jpg">
+        <source src="media/sunday-film.mp4" type="video/mp4">
+        Your browser can&rsquo;t play this video.
+      </video>
     </div>
   </div>
 </section>
@@ -300,11 +310,17 @@
   </div>
 </footer>
 
+<!-- toast.js shows success/error messages for everything below -->
+<script src="js/toast.js"></script>
 <script src="js/consent.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/intro.js"></script>
-<!-- about.js fades sections in as you scroll; visit.js builds the building map -->
-<script src="js/about.js"></script>
+<!-- visit.js builds the building map -->
 <script src="js/visit.js"></script>
+<!-- pause/play and "Sound on" buttons for the videos -->
+<script src="js/media.js"></script>
+<!-- smooth scrolling, fade-ins, parallax, progress bar (scroll.js uses the Lenis library) -->
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/scroll.js"></script>
 </body>
 </html>

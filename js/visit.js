@@ -237,7 +237,14 @@
   svg = el("svg", { "class": "map-svg", role: "img", "aria-label": "Floor plan of Movement Church" });
   rotGroup = el("g", {}, svg);
   var roomsGroup = el("g", { "class": "map-rooms" }, rotGroup);
-  el("image", { href: "img/floor-plan.png", x: PLAN.x, y: PLAN.y, width: PLAN.w, height: PLAN.h, "class": "map-plan" }, rotGroup);
+  var planImg = el("image", { href: "img/floor-plan.png", x: PLAN.x, y: PLAN.y, width: PLAN.w, height: PLAN.h, "class": "map-plan" }, rotGroup);
+  planImg.addEventListener("error", function () {
+    var msg = document.createElement("p");
+    msg.className = "map-error";
+    msg.setAttribute("role", "status");
+    msg.textContent = "The floor plan couldn’t load. Refresh the page to try again — the list of places below still works.";
+    mapBox.appendChild(msg);
+  });
   routeLine = el("polyline", { "class": "map-route", fill: "none" }, rotGroup);
   routeDot = el("circle", { "class": "map-route-end", r: 16 }, rotGroup);
   labelsGroup = el("g", { "class": "map-labels", "aria-hidden": "true" }, svg);
@@ -329,7 +336,10 @@
     card.classList.add("is-in");
 
     /* on phones, picking from the map brings the card into view */
-    if (fromMap && !wide.matches) card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    if (fromMap && !wide.matches) {
+      if (window.mvLenis) window.mvLenis.scrollTo(card, { offset: -100 });
+      else card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
   }
 
   function groupName(g) {
@@ -341,7 +351,11 @@
   var asked = (location.hash.match(/^#map-(.+)$/) || [])[1];
   if (asked && shapes[asked]) {
     select(asked, false);
-    setTimeout(function () { mapBox.scrollIntoView({ behavior: "smooth", block: "center" }); }, 300);
+    setTimeout(function () {
+      /* go through the smooth scroller when it's running (js/scroll.js) */
+      if (window.mvLenis) window.mvLenis.scrollTo(mapBox, { offset: -120 });
+      else mapBox.scrollIntoView({ behavior: "smooth", block: "center" });
+    }, 300);
   } else {
     select("entrance", false);
   }
