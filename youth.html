@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-CA">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -168,14 +168,14 @@
 <!-- ==========================================================
      MARQUEE - two lines scrolling opposite ways
      ========================================================== -->
-<div class="y-marquee" aria-hidden="true">
-  <div class="y-marquee-row">
+<div class="y-marquee" role="marquee" tabindex="0" aria-label="You are known. You belong. Grades 7 to 12, Wednesdays, come as you are, bring a friend. Scrolling; hover or focus to pause.">
+  <div aria-hidden="true" class="y-marquee-row">
     <div class="y-marquee-track">
       <span>You are known</span><span>You belong</span><span>You are known</span><span>You belong</span>
       <span>You are known</span><span>You belong</span><span>You are known</span><span>You belong</span>
     </div>
   </div>
-  <div class="y-marquee-row y-marquee-row--back">
+  <div aria-hidden="true" class="y-marquee-row y-marquee-row--back">
     <div class="y-marquee-track">
       <span>Grades 7&ndash;12</span><span>Wednesdays</span><span>Come as you are</span><span>Bring a friend</span>
       <span>Grades 7&ndash;12</span><span>Wednesdays</span><span>Come as you are</span><span>Bring a friend</span>
@@ -283,7 +283,7 @@
       <p>Thank you for investing in the next generation &mdash; your generosity truly makes a difference.</p>
       <div class="y-cta">
         <button class="y-btn y-btn--lime copy" type="button" data-copy="give@wearemovement.ca">Copy e-transfer email</button>
-        <a class="y-btn y-btn--ghost" href="give.html">Learn more</a>
+        <a class="y-btn y-btn--ghost" href="give.html" aria-label="Learn more about giving">Learn more</a>
       </div>
     </div>
   </div>
@@ -302,7 +302,7 @@
     <span class="vh">Search the questions</span>
     <input type="search" id="youthSearch" placeholder="Search questions&hellip; (try &ldquo;cost&rdquo; or &ldquo;parents&rdquo;)" autocomplete="off">
   </label>
-  <p class="y-noresult" id="youthNoResult" hidden>No questions match that. Email <a href="mailto:isaiah@wearemovement.ca">isaiah@wearemovement.ca</a> and we&rsquo;ll help.</p>
+  <p class="y-noresult" id="youthNoResult" role="status" hidden>No questions match that. Email <a href="mailto:isaiah@wearemovement.ca">isaiah@wearemovement.ca</a> and we&rsquo;ll help.</p>
 
   <div class="y-faq" id="youthFaq">
     <details><summary>What is Movement Youth?</summary><p>Movement Youth is our weekly youth program for students in Grades 7&ndash;12. It&rsquo;s a place to build real friendships, have fun, ask honest questions, and grow in faith together. Everyone is welcome &mdash; whether you&rsquo;ve grown up in church or have never been before.</p></details>

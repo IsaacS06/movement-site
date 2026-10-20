@@ -23,6 +23,13 @@
     video.src = video.getAttribute("data-src");
     var p = video.play();
     if (p && p.catch) p.catch(function () {});   // autoplay blocked: the poster stays
+    /* pause while hovered or while keyboard focus is in the hero (WCAG 2.2.2) */
+    var hero = video.parentNode;
+    var resume = function () { if (!hero.matches(":hover") && !hero.contains(document.activeElement)) { var q = video.play(); if (q && q.catch) q.catch(function () {}); } };
+    hero.addEventListener("mouseenter", function () { video.pause(); });
+    hero.addEventListener("mouseleave", resume);
+    hero.addEventListener("focusin", function () { video.pause(); });
+    hero.addEventListener("focusout", function () { setTimeout(resume, 0); });
   }
 
 

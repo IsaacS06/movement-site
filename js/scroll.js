@@ -153,7 +153,7 @@
       prevY = y;
       boost += (Math.min(v * 0.35, 5) - boost) * 0.08;        // ease toward the target speed
       marquees.forEach(function (el) {
-        el.getAnimations().forEach(function (anim) { anim.playbackRate = 1 + boost; });
+        el.getAnimations().forEach(function (anim) { anim.playbackRate = 1 + boost; });   // paused (hover/focus) stays paused
       });
       requestAnimationFrame(spin);
     };

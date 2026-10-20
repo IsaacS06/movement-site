@@ -171,6 +171,17 @@
     /* Esc closes, arrow keys move */
     document.addEventListener("keydown", function (e) {
       if (!viewer.hasAttribute("open")) return;
+      /* keep Tab inside the open viewer */
+      if (e.key === "Tab") {
+        var f = viewer.querySelectorAll("button:not([hidden])");
+        if (f.length) {
+          var first = f[0], last = f[f.length - 1];
+          if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+          else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+          else if (!viewer.contains(document.activeElement)) { e.preventDefault(); first.focus(); }
+        }
+        return;
+      }
       if (e.key === "Escape") closeViewer();
       else if (e.key === "ArrowLeft") stepViewer(-1);
       else if (e.key === "ArrowRight") stepViewer(1);

@@ -38,6 +38,8 @@ h1,h2,h3{margin:0;font-family:var(--disp);text-wrap:balance;font-weight:800;lett
 p{margin:0}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .svg-defs{position:absolute;width:0;height:0;overflow:hidden}
+/* visually hidden, still read by screen readers (same as .vh) */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
 .shell{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut)}
 
 .kick{
@@ -394,6 +396,9 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 .ticker span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--hot);margin-inline:clamp(18px,2.4vw,30px)}
 .ticker span:nth-child(even)::after{background:#8fe8e0}
 @keyframes ticker{to{transform:translateX(-50%)}}
+/* scrolling banners pause while hovered or keyboard-focused (WCAG 2.2.2) */
+.ticker:hover .ticker-track,.ticker:focus .ticker-track,.y-marquee:hover .y-marquee-track,.y-marquee:focus .y-marquee-track,.y-hero:hover .y-badge svg,.y-hero:focus-within .y-badge svg{animation-play-state:paused}
+.ticker:focus:not(:focus-visible),.y-marquee:focus:not(:focus-visible){outline:none}
 
 /* -- values: the first letters spell MOVEMENT, read left to right -- */
 .spell{display:flex;gap:clamp(2px,.6vw,8px);margin-top:clamp(18px,2.4vw,26px);font-family:var(--disp);font-weight:800;font-size:clamp(40px,7vw,84px);line-height:.9;letter-spacing:-.04em}
