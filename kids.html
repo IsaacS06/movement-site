@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Movement Kids | Movement Church</title>
+<meta name="description" content="Movement Kids is a safe, fun, faith-filled place for your kids, birth to Grade 4, every Sunday at 9:00 and 11:00am.">
+
+<!-- Social sharing preview -->
+<meta property="og:title" content="Movement Kids | Movement Church">
+<meta property="og:description" content="Movement Kids is a safe, fun, faith-filled place for your kids, birth to Grade 4, every Sunday at 9:00 and 11:00am.">
+<meta property="og:image" content="https://www.wearemovement.ca/img/kids-hero.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Movement Church">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://www.wearemovement.ca/kids.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/logo.png">
+<link rel="canonical" href="https://www.wearemovement.ca/kids.html">
+<meta name="theme-color" content="#f6f7f5">
+<link rel="apple-touch-icon" href="img/logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+
+<!-- Page intro: decide before anything paints whether the "M" animation plays,
+     and switch on the left-to-right fade for the big word on the home page.
+     The intro plays once per visit. For testing, set TEST to true to play it on every reload. -->
+<script>try{var TEST=false,d=document.documentElement,calm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!calm)d.classList.add("word-tick");if((TEST||!sessionStorage.getItem("mvIntro"))&&!calm){d.classList.add("has-intro","intro-wait");sessionStorage.setItem("mvIntro","1")}}catch(e){}</script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css">
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.wearemovement.ca/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Movement Kids",
+   "item": "https://www.wearemovement.ca/kids.html"
+  }
+ ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ==========================================================
+     PAGE INTRO - the "M" draws itself (see js/intro.js)
+     ========================================================== -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-bg"></div>
+  <div class="intro-mark">
+    <svg class="intro-svg" viewBox="0 0 400 380">
+      <!-- recolours the black logo; the colour is set in CSS (.intro-flood) -->
+      <filter id="introTint"><feFlood class="intro-flood"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+      <image class="intro-logo" href="img/logo.png" width="400" height="380" filter="url(#introTint)"/>
+      <!-- a thick line in the background colour hides the logo, then pulls back along the M -->
+      <path class="intro-cover" pathLength="1" d="M46 372 L75 70 L200 268 L325 70 L353 372"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ==========================================================
+     NAV - same as index.html, with links pointing back to it
+     ========================================================== -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-logo" href="index.html" aria-label="Movement Church home">
+      <img src="img/logo.png" alt=""><b>Movement Church</b>
+    </a>
+    <div class="nav-links" id="navMenu">
+      <a href="visit.html">Visit</a>
+      <div class="nav-group is-current">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub1">Ministries<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub1">
+          <a href="kids.html" aria-current="page">Movement Kids<small>Birth &ndash; Grade 4</small></a>
+          <a href="club56.html">Club 56<small>Grades 5 &amp; 6</small></a>
+          <a href="youth.html">Movement Youth<small>Grades 7&ndash;12</small></a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub2">Get involved<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub2">
+          <a href="groups.html">Groups<small>Find your people</small></a>
+          <a href="teams.html">Teams<small>Serve on a team</small></a>
+          <a href="baptism.html">Baptism<small>Go public with your faith</small></a>
+          <a href="care.html">Care<small>Prayer and support</small></a>
+          <a href="job-opportunities.html">Job Opportunities<small>Work with us</small></a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="give.html">Give</a>
+      <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+    </div>
+    <a class="pill" href="https://wearemovement.churchcenter.com/people/forms/989717">Plan a Visit</a>
+    <!-- phones and tablets: opens the links above as a dropdown (js/nav.js) -->
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+<nav class="crumbs shell" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Movement Kids</li></ol></nav>
+
+
+
+<!-- ==========================================================
+     HERO
+     ========================================================== -->
+<header class="give-hero shell">
+  <div class="give-hero-txt">
+    <img class="kids-logo" src="img/movement-kids-logo.png" alt="Movement Kids">
+    <h1>We believe in the <span class="hot">next generation</span></h1>
+    <p class="about-lede">Movement Kids is a safe, fun, faith-filled place for your kids! Every Sunday, they&rsquo;ll experience worship, interactive lessons, and activities that bring the Bible to life. We believe church should be the best hour of their week as they grow in faith and friendships at Movement Kids!</p>
+    <div class="hero-cta give-cta">
+      <a class="pill pill--hot" href="https://wearemovement.churchcenter.com/people/forms/989717">Plan a visit</a>
+      <a class="pill pill--ghost" href="#ages">Find your child&rsquo;s room <span aria-hidden="true">&#8595;</span></a>
+    </div>
+  </div>
+  <div class="give-hero-img">
+    <img src="img/kids-hero.jpg" alt="Kids dancing during worship at Movement Kids">
+    <span class="give-sticker">Sundays <b>9 &amp; 11am</b></span>
+  </div>
+</header>
+
+
+<!-- ==========================================================
+     AGE GROUPS - "On the map" opens that room on the Visit page
+     ========================================================== -->
+<section class="plan sec" id="ages">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <span class="kick">Birth &ndash; Grade 4</span>
+      <h2>A room for <span class="tealt">every age</span></h2>
+    </div>
+    <div class="ages">
+      <article class="age reveal">
+        <span class="age-tag">Babies</span>
+        <h3>Nursery</h3>
+        <p>Our Nursery is a loving, peaceful environment where your little ones are cared for by our trained team. We provide a safe, clean space filled with gentle care, playtime, and music so parents can enjoy the service knowing their baby is in great hands.</p>
+        <a class="way-link" href="visit.html#map-r6">See it on the map <span aria-hidden="true">&#8594;</span></a>
+      </article>
+      <article class="age reveal">
+        <span class="age-tag">Ages 2 &amp; 3</span>
+        <h3>2&rsquo;s &amp; 3&rsquo;s</h3>
+        <p>This stage is full of curiosity and energy! Our 2 &amp; 3-year-old room is designed for hands-on fun, songs, and simple Bible truths taught through play. Kids begin learning that God made them, loves them, and wants to be their friend forever.</p>
+        <a class="way-link" href="visit.html#map-r5">See it on the map <span aria-hidden="true">&#8594;</span></a>
+      </article>
+      <article class="age reveal">
+        <span class="age-tag">Ages 4 &amp; 5</span>
+        <h3>4&rsquo;s &amp; 5&rsquo;s</h3>
+        <p>Preschoolers are ready for bigger adventures! In this environment, kids experience high-energy worship, engaging Bible stories, and creative activities that help them understand God&rsquo;s love and His big plans for them.</p>
+        <a class="way-link" href="visit.html#map-r8">See it on the map <span aria-hidden="true">&#8594;</span></a>
+      </article>
+      <article class="age reveal">
+        <span class="age-tag">Grades 1&ndash;4</span>
+        <h3>Grades 1&ndash;4</h3>
+        <p>Elementary kids will love this action-packed experience with worship, small groups, and interactive lessons. We help kids learn to trust God, make wise choices, and treat others with love&mdash;building a foundation for a lifelong relationship with Jesus.</p>
+        <a class="way-link" href="visit.html#map-r10">See it on the map <span aria-hidden="true">&#8594;</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     FAQ
+     ========================================================== -->
+<section class="sec">
+  <div class="shell beliefs">
+    <div class="sec-head beliefs-head">
+      <span class="kick">FAQ</span>
+      <h2>Frequently asked <span class="hot">questions</span></h2>
+      <p class="sub">Any other questions? Email <a class="inline-link" href="mailto:kids@wearemovement.ca">kids@wearemovement.ca</a></p>
+      <img class="kids-family" src="img/kids-family.jpg" alt="A dad walking in through the front doors with his kids" loading="lazy">
+    </div>
+    <div class="faq">
+      <details>
+        <summary>What should I expect when I arrive?</summary>
+        <p>Movement Kids is all about creating a fun, exciting, and welcoming place where kids can know Jesus, grow in their faith, and build friendships! When you arrive, head to the Movement Kids Check-In Desk in the lobby. Our friendly team will get your child checked in and give you a security sticker with a number. Keep this sticker with you&mdash;you&rsquo;ll need it when it&rsquo;s time to pick up your child after the service. Once they&rsquo;re checked in, it&rsquo;s time to head to their class and get ready for a morning filled with fun, games, worship, Bible stories, and friends!</p>
+      </details>
+      <details>
+        <summary>Is there something for my child with special needs?</summary>
+        <p>At Movement Kids, we want every child to feel welcomed, loved, included, and part of the family! Our team works hard to create a safe and supportive environment where kids with different needs can participate, learn about Jesus, make friends, and have fun! We understand that church can sometimes feel overwhelming. If your child becomes overstimulated or needs some extra support, we have a sensory space in the corner of our Kids Church room. This gives children a quieter place to reset while still being able to see and take part in Kids Church. A Movement Kids leader will be there to supervise and support them. At Movement Kids, every child has a place to belong!</p>
+      </details>
+      <details>
+        <summary>When does Movement Kids happen?</summary>
+        <p>Movement Kids happens every Sunday at 9:00am and 11:00am!</p>
+      </details>
+      <details>
+        <summary>How can I contact you?</summary>
+        <p>You can contact <a class="inline-link" href="mailto:kids@wearemovement.ca">kids@wearemovement.ca</a> if you have any questions.</p>
+      </details>
+      <details>
+        <summary>What do the kids do in their classes?</summary>
+        <p>They experience age-appropriate Bible teaching, worship, fun activities, and learn about Jesus!</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     RESOURCES (outside websites)
+     ========================================================== -->
+<section class="plan sec">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <span class="kick">For parents</span>
+      <h2><span class="tealt">Resources</span></h2>
+    </div>
+    <div class="ways ways--4">
+      <a class="way way--link reveal" href="https://www.bible.com/kids" target="_blank" rel="noopener"><h3>YouVersion Bible App for Kids</h3><span class="way-link">Learn more <span aria-hidden="true">&#8599;</span></span></a>
+      <a class="way way--link reveal" href="https://www.legacycoalition.ca/" target="_blank" rel="noopener"><h3>Helping Grandparents</h3><span class="way-link">Learn more <span aria-hidden="true">&#8599;</span></span></a>
+      <a class="way way--link reveal" href="https://christianparentingbasics.com/" target="_blank" rel="noopener"><h3>Christian Parenting</h3><span class="way-link">Learn more <span aria-hidden="true">&#8599;</span></span></a>
+      <a class="way way--link reveal" href="https://pentecostalpublishing.com/collections/kids-storybook" target="_blank" rel="noopener"><h3>Children&rsquo;s Books</h3><span class="way-link">Learn more <span aria-hidden="true">&#8599;</span></span></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     STAY CONNECTED
+     ========================================================== -->
+<section class="sec shell">
+  <div class="final">
+    <div>
+      <span class="kick final-kick">Stay connected</span>
+      <h2>Follow Movement Kids</h2>
+      <p>Photos, updates and what&rsquo;s coming up on Sundays.</p>
+    </div>
+    <div class="final-btns">
+      <a class="pill" href="https://www.instagram.com/movement_kidswoodstock" target="_blank" rel="noopener">Instagram</a>
+      <a class="pill pill--ghost" href="https://www.facebook.com/share/19VbGJsyGG/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+<!-- ==========================================================
+     FOOTER - same as index.html
+     ========================================================== -->
+<footer class="shell">
+  <div class="foot-grid">
+    <div class="foot-id">
+      <img src="img/logo.png" alt="Movement Church">
+      <address>
+        65 Lansdowne Ave<br>Woodstock, ON<br><br>
+        <a href="tel:+15195372211">(519) 537-2211</a><br>
+        <a href="mailto:info@wearemovement.ca">info@wearemovement.ca</a>
+      </address>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <span class="kick">Visit</span>
+        <a href="visit.html">Plan a visit</a>
+        <a href="about.html">About us</a>
+        <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+        <a href="baptism.html">Baptism</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">Family</span>
+        <a href="kids.html">Kids</a>
+        <a href="club56.html">Club 56</a>
+        <a href="youth.html">Youth</a>
+        <a href="groups.html">Groups</a>
+        <a href="teams.html">Teams</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">More</span>
+        <a href="care.html">Care &amp; support</a>
+        <a href="give.html">Give</a>
+        <a href="job-opportunities.html">Job opportunities</a>
+        <a href="https://www.youtube.com/@MovementChurchCanada/streams">Watch online</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-bot">
+    <small>&copy; 2026 Movement Church &middot; Woodstock, Ontario &middot; <a href="privacy.html">Privacy Policy</a> &middot; <button type="button" class="foot-link" data-cookie-settings>Cookie settings</button></small>
+    <div class="socs">
+      <a href="https://www.instagram.com/movement_church/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1 0 18.7 12 6.7 6.7 0 0 0 12 5.3zm0 11A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.2a1.6 1.6 0 1 1-1.6-1.6 1.6 1.6 0 0 1 1.6 1.6z"/></svg></a>
+      <a href="https://www.facebook.com/MovementChurchWoodstock" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://www.youtube.com/@MovementChurchCanada" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5a2.5 2.5 0 0 0-1.8 1.8C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM9.7 15.1V8.9l6.1 3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/consent.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/intro.js"></script>
+<!-- about.js fades sections in as you scroll -->
+<script src="js/about.js"></script>
+</body>
+</html>

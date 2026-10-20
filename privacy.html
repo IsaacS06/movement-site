@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Privacy Policy | Movement Church</title>
+<meta name="description" content="How Movement Church collects, uses and protects your personal information, and how cookies and analytics work on this website.">
+
+<!-- Social sharing preview -->
+<meta property="og:title" content="Privacy Policy | Movement Church">
+<meta property="og:description" content="How Movement Church collects, uses and protects your personal information, and how cookies and analytics work on this website.">
+<meta property="og:image" content="https://www.wearemovement.ca/img/room.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Movement Church">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://www.wearemovement.ca/privacy.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/logo.png">
+<link rel="canonical" href="https://www.wearemovement.ca/privacy.html">
+<meta name="theme-color" content="#f6f7f5">
+<link rel="apple-touch-icon" href="img/logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+
+<!-- Page intro: decide before anything paints whether the "M" animation plays,
+     and switch on the left-to-right fade for the big word on the home page.
+     The intro plays once per visit. For testing, set TEST to true to play it on every reload. -->
+<script>try{var TEST=false,d=document.documentElement,calm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!calm)d.classList.add("word-tick");if((TEST||!sessionStorage.getItem("mvIntro"))&&!calm){d.classList.add("has-intro","intro-wait");sessionStorage.setItem("mvIntro","1")}}catch(e){}</script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css">
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.wearemovement.ca/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Privacy Policy",
+   "item": "https://www.wearemovement.ca/privacy.html"
+  }
+ ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ==========================================================
+     PAGE INTRO - the "M" draws itself (see js/intro.js)
+     ========================================================== -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-bg"></div>
+  <div class="intro-mark">
+    <svg class="intro-svg" viewBox="0 0 400 380">
+      <!-- recolours the black logo; the colour is set in CSS (.intro-flood) -->
+      <filter id="introTint"><feFlood class="intro-flood"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+      <image class="intro-logo" href="img/logo.png" width="400" height="380" filter="url(#introTint)"/>
+      <!-- a thick line in the background colour hides the logo, then pulls back along the M -->
+      <path class="intro-cover" pathLength="1" d="M46 372 L75 70 L200 268 L325 70 L353 372"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ==========================================================
+     NAV - same as index.html, with links pointing back to it
+     ========================================================== -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-logo" href="index.html" aria-label="Movement Church home">
+      <img src="img/logo.png" alt=""><b>Movement Church</b>
+    </a>
+    <div class="nav-links" id="navMenu">
+      <a href="visit.html">Visit</a>
+      <div class="nav-group">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub1">Ministries<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub1">
+          <a href="kids.html">Movement Kids<small>Birth &ndash; Grade 4</small></a>
+          <a href="club56.html">Club 56<small>Grades 5 &amp; 6</small></a>
+          <a href="youth.html">Movement Youth<small>Grades 7&ndash;12</small></a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub2">Get involved<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub2">
+          <a href="groups.html">Groups<small>Find your people</small></a>
+          <a href="teams.html">Teams<small>Serve on a team</small></a>
+          <a href="baptism.html">Baptism<small>Go public with your faith</small></a>
+          <a href="care.html">Care<small>Prayer and support</small></a>
+          <a href="job-opportunities.html">Job Opportunities<small>Work with us</small></a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="give.html">Give</a>
+      <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+    </div>
+    <a class="pill" href="https://wearemovement.churchcenter.com/people/forms/989717">Plan a Visit</a>
+    <!-- phones and tablets: opens the links above as a dropdown (js/nav.js) -->
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+<nav class="crumbs shell" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Privacy Policy</li></ol></nav>
+
+
+
+<!-- ==========================================================
+     PRIVACY POLICY
+     A plain-language policy for a Canadian church website.
+     Have it reviewed by your leadership (and a lawyer if you
+     can) before launch, and update the date when it changes.
+     ========================================================== -->
+<header class="res-hero shell">
+  <span class="kick">Legal</span>
+  <h1>Privacy <span class="hot">Policy</span></h1>
+  <p class="about-lede">How Movement Church collects, uses and protects your personal information when you use this website.</p>
+  <p class="legal-date">Last updated: October 20, 2026</p>
+</header>
+
+<section class="sec shell pt0">
+  <div class="legal">
+    <nav class="legal-toc" aria-label="On this page">
+      <span class="kick">On this page</span>
+      <a href="#who">Who we are</a>
+      <a href="#collect">What we collect</a>
+      <a href="#use">How we use it</a>
+      <a href="#services">Services we use</a>
+      <a href="#cookies">Cookies &amp; analytics</a>
+      <a href="#kids">Children</a>
+      <a href="#keep">Keeping it safe</a>
+      <a href="#rights">Your choices</a>
+      <a href="#links">Other websites</a>
+      <a href="#access">Accessibility</a>
+      <a href="#contact">Contact us</a>
+    </nav>
+
+    <div class="legal-body">
+      <h2 id="who">Who we are</h2>
+      <p>This website is run by Movement Church, 65 Lansdowne Ave, Woodstock, Ontario N4T 1S8. We take your privacy seriously and handle personal information in line with Canada&rsquo;s <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) and other privacy laws that apply to us.</p>
+
+      <h2 id="collect">What we collect</h2>
+      <p><strong>Information you give us.</strong> When you fill out a form (for example Plan a Visit, Request Prayer, Talk with a Supporter, Join a Team, baptism sign-up, or a youth or kids registration), email us, or give online, we collect what you choose to share: usually your name, email, phone number, and any details you write in.</p>
+      <p><strong>Information collected automatically.</strong> If you accept analytics cookies, Google Analytics records general information such as the pages you visit, how long you stay, your browser and device type, and your approximate location (city level). It does not tell us who you are.</p>
+      <p><strong>Things we don&rsquo;t collect.</strong> We don&rsquo;t sell, rent or trade your information, and we don&rsquo;t use advertising cookies on this website.</p>
+
+      <h2 id="use">How we use it</h2>
+      <ul>
+        <li>To respond to your questions, prayer requests and messages.</li>
+        <li>To help you plan a visit and get connected to ministries, groups and teams.</li>
+        <li>To keep children and students safe at check-in and pick-up.</li>
+        <li>To process donations and issue tax receipts.</li>
+        <li>To send updates you&rsquo;ve signed up for (you can unsubscribe at any time).</li>
+        <li>To understand which parts of the website are helpful, and improve it.</li>
+      </ul>
+      <p>We only share your information with church staff and trained volunteers who need it to help you, or when the law requires it.</p>
+
+      <h2 id="services">Services we use</h2>
+      <p>Some parts of this website are provided by other companies. When you use them, their own privacy policies also apply, and your information may be stored outside Canada.</p>
+      <ul>
+        <li><strong>Planning Center (Church Center)</strong> &mdash; our forms, events, groups and registrations.</li>
+        <li><strong>Tithe.ly</strong> &mdash; online giving. We never see or store your full card or bank details.</li>
+        <li><strong>Google</strong> &mdash; Google Analytics (only with your consent), Google Maps on our Visit page, and Google Fonts, which loads the website&rsquo;s typefaces.</li>
+        <li><strong>YouTube and Facebook</strong> &mdash; when you follow a link to watch online.</li>
+      </ul>
+
+      <h2 id="cookies">Cookies &amp; analytics</h2>
+      <p>Cookies are small files saved by your browser. This website only uses Google Analytics cookies, and only after you click <strong>Accept</strong> on our cookie banner. If you click <strong>Decline</strong>, Google Analytics doesn&rsquo;t load at all.</p>
+      <p>We also save your cookie choice, and a note so our opening animation only plays once per visit, on your own device. These aren&rsquo;t sent to us.</p>
+      <p>You can change your mind at any time: <button type="button" class="inline-link legal-btn" data-cookie-settings>open cookie settings</button>. You can also clear cookies in your browser&rsquo;s settings.</p>
+
+      <h2 id="kids">Children</h2>
+      <p>This website isn&rsquo;t designed to collect information directly from children. Information about children (for example for Movement Kids check-in, Club 56 or Movement Youth registration) is provided by a parent or guardian and used only for their care and safety.</p>
+
+      <h2 id="keep">Keeping it safe</h2>
+      <p>We use reasonable physical, technical and administrative safeguards to protect your information, and we keep it only as long as we need it for the purposes above or as required by law (for example, donation records for tax purposes).</p>
+
+      <h2 id="rights">Your choices</h2>
+      <p>You can ask to see the personal information we hold about you, ask us to correct it, or ask us to delete it where we&rsquo;re able to. You can also withdraw your consent to emails, texts or analytics at any time. Contact us using the details below and we&rsquo;ll respond within 30 days.</p>
+      <p>If you have a concern we haven&rsquo;t resolved, you can contact the <a class="inline-link" href="https://www.priv.gc.ca/" target="_blank" rel="noopener">Office of the Privacy Commissioner of Canada</a>.</p>
+
+      <h2 id="links">Other websites</h2>
+      <p>Our website links to other websites, including crisis lines, counselling services and book or parenting resources. We aren&rsquo;t responsible for their content or privacy practices, and a link isn&rsquo;t an endorsement of everything on them. In an emergency, call 911.</p>
+
+      <h2 id="access">Accessibility</h2>
+      <p>We want everyone to be able to use this website. It&rsquo;s built to work with keyboards and screen readers, respects your device&rsquo;s &ldquo;reduce motion&rdquo; setting, and aims to meet the Web Content Accessibility Guidelines (WCAG) 2.1 level AA. If something isn&rsquo;t working for you, please tell us and we&rsquo;ll fix it or get you the information another way.</p>
+
+      <h2 id="contact">Contact us</h2>
+      <p>Questions about this policy or your information? Contact our privacy officer:</p>
+      <address class="legal-contact">
+        Movement Church<br>
+        65 Lansdowne Ave, Woodstock, ON N4T 1S8<br>
+        <a href="mailto:info@wearemovement.ca">info@wearemovement.ca</a> &middot; <a href="tel:+15195372211">(519) 537-2211</a>
+      </address>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+<!-- ==========================================================
+     FOOTER - same as index.html
+     ========================================================== -->
+<footer class="shell">
+  <div class="foot-grid">
+    <div class="foot-id">
+      <img src="img/logo.png" alt="Movement Church">
+      <address>
+        65 Lansdowne Ave<br>Woodstock, ON<br><br>
+        <a href="tel:+15195372211">(519) 537-2211</a><br>
+        <a href="mailto:info@wearemovement.ca">info@wearemovement.ca</a>
+      </address>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <span class="kick">Visit</span>
+        <a href="visit.html">Plan a visit</a>
+        <a href="about.html">About us</a>
+        <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+        <a href="baptism.html">Baptism</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">Family</span>
+        <a href="kids.html">Kids</a>
+        <a href="club56.html">Club 56</a>
+        <a href="youth.html">Youth</a>
+        <a href="groups.html">Groups</a>
+        <a href="teams.html">Teams</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">More</span>
+        <a href="care.html">Care &amp; support</a>
+        <a href="give.html">Give</a>
+        <a href="job-opportunities.html">Job opportunities</a>
+        <a href="https://www.youtube.com/@MovementChurchCanada/streams">Watch online</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-bot">
+    <small>&copy; 2026 Movement Church &middot; Woodstock, Ontario &middot; <a href="privacy.html">Privacy Policy</a> &middot; <button type="button" class="foot-link" data-cookie-settings>Cookie settings</button></small>
+    <div class="socs">
+      <a href="https://www.instagram.com/movement_church/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1 0 18.7 12 6.7 6.7 0 0 0 12 5.3zm0 11A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.2a1.6 1.6 0 1 1-1.6-1.6 1.6 1.6 0 0 1 1.6 1.6z"/></svg></a>
+      <a href="https://www.facebook.com/MovementChurchWoodstock" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://www.youtube.com/@MovementChurchCanada" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5a2.5 2.5 0 0 0-1.8 1.8C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM9.7 15.1V8.9l6.1 3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/consent.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/intro.js"></script>
+<!-- about.js fades sections in as you scroll -->
+<script src="js/about.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+# Movement Church - rules for search engines
+# Everything on the site may be indexed.
+User-agent: *
+Allow: /
+Disallow: /404.html
+
+Sitemap: https://www.wearemovement.ca/sitemap.xml

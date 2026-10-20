@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Crisis Support | Movement Church</title>
+<meta name="description" content="Need help now? Crisis lines, emergency services and counselling support in Oxford County, from Movement Church.">
+
+<!-- Social sharing preview -->
+<meta property="og:title" content="Crisis Support | Movement Church">
+<meta property="og:description" content="Need help now? Crisis lines, emergency services and counselling support in Oxford County, from Movement Church.">
+<meta property="og:image" content="https://www.wearemovement.ca/img/care-praying.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Movement Church">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://www.wearemovement.ca/crisis-support.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/logo.png">
+<link rel="canonical" href="https://www.wearemovement.ca/crisis-support.html">
+<meta name="theme-color" content="#f6f7f5">
+<link rel="apple-touch-icon" href="img/logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+
+<!-- Page intro: decide before anything paints whether the "M" animation plays,
+     and switch on the left-to-right fade for the big word on the home page.
+     The intro plays once per visit. For testing, set TEST to true to play it on every reload. -->
+<script>try{var TEST=false,d=document.documentElement,calm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!calm)d.classList.add("word-tick");if((TEST||!sessionStorage.getItem("mvIntro"))&&!calm){d.classList.add("has-intro","intro-wait");sessionStorage.setItem("mvIntro","1")}}catch(e){}</script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css">
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.wearemovement.ca/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Care",
+   "item": "https://www.wearemovement.ca/care.html"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Crisis Support",
+   "item": "https://www.wearemovement.ca/crisis-support.html"
+  }
+ ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ==========================================================
+     PAGE INTRO - the "M" draws itself (see js/intro.js)
+     ========================================================== -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-bg"></div>
+  <div class="intro-mark">
+    <svg class="intro-svg" viewBox="0 0 400 380">
+      <!-- recolours the black logo; the colour is set in CSS (.intro-flood) -->
+      <filter id="introTint"><feFlood class="intro-flood"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+      <image class="intro-logo" href="img/logo.png" width="400" height="380" filter="url(#introTint)"/>
+      <!-- a thick line in the background colour hides the logo, then pulls back along the M -->
+      <path class="intro-cover" pathLength="1" d="M46 372 L75 70 L200 268 L325 70 L353 372"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ==========================================================
+     NAV - same as index.html, with links pointing back to it
+     ========================================================== -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-logo" href="index.html" aria-label="Movement Church home">
+      <img src="img/logo.png" alt=""><b>Movement Church</b>
+    </a>
+    <div class="nav-links" id="navMenu">
+      <a href="visit.html">Visit</a>
+      <div class="nav-group">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub1">Ministries<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub1">
+          <a href="kids.html">Movement Kids<small>Birth &ndash; Grade 4</small></a>
+          <a href="club56.html">Club 56<small>Grades 5 &amp; 6</small></a>
+          <a href="youth.html">Movement Youth<small>Grades 7&ndash;12</small></a>
+        </div>
+      </div>
+      <div class="nav-group is-current">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub2">Get involved<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub2">
+          <a href="groups.html">Groups<small>Find your people</small></a>
+          <a href="teams.html">Teams<small>Serve on a team</small></a>
+          <a href="baptism.html">Baptism<small>Go public with your faith</small></a>
+          <a href="care.html">Care<small>Prayer and support</small></a>
+          <a href="job-opportunities.html">Job Opportunities<small>Work with us</small></a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="give.html">Give</a>
+      <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+    </div>
+    <a class="pill" href="https://wearemovement.churchcenter.com/people/forms/989717">Plan a Visit</a>
+    <!-- phones and tablets: opens the links above as a dropdown (js/nav.js) -->
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+<nav class="crumbs shell" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li><a href="care.html">Care</a></li><li aria-current="page">Crisis Support</li></ol></nav>
+
+
+
+<!-- ==========================================================
+     HERO  (this page is only linked from care.html)
+     ========================================================== -->
+<header class="res-hero shell">
+  <span class="kick">Crisis Support</span>
+  <h1>Need help <span class="hot">now?</span></h1>
+  <p class="about-lede">We all face situations in life where we need care and support. In some cases, our situation is unique, desperate, and requires the attention of more immediate and professional help. We know at times it can be difficult to even know where to begin &ndash; but we can help!</p>
+  <p class="res-alert"><strong>In immediate danger?</strong> Call <a href="tel:911">911</a>.</p>
+</header>
+
+
+<!-- ==========================================================
+     EMERGENCY SERVICES
+     ========================================================== -->
+<section class="sec shell pt0">
+  <div class="sec-head reveal">
+    <span class="kick">Emergency Services</span>
+    <h2>Call or text <span class="tealt">any time</span></h2>
+  </div>
+  <div class="ways ways--4 res-orgs">
+    <article class="way reveal">
+      <h3>Canada Suicide Prevention Services</h3>
+      <a class="res-phone" href="tel:18334564566">1-833-456-4566</a>
+      <a class="way-link" href="sms:45645">Text 45645 <span aria-hidden="true">&#8594;</span></a>
+    </article>
+    <article class="way reveal">
+      <h3>Canadian Mental Health Association Oxford</h3>
+      <a class="res-phone" href="tel:18669332023">1-866-933-2023</a>
+      <a class="way-link" href="https://reachout247.ca/" target="_blank" rel="noopener">reachout247.ca <span aria-hidden="true">&#8599;</span></a>
+    </article>
+    <article class="way reveal">
+      <h3>Domestic Abuse Services Oxford (DASO)</h3>
+      <a class="res-phone" href="tel:18002651983">1-800-265-1983</a>
+      <a class="way-link" href="https://daso.ca/" target="_blank" rel="noopener">daso.ca <span aria-hidden="true">&#8599;</span></a>
+    </article>
+    <article class="way reveal">
+      <h3>Wellness and Emotional Support for Youth Online</h3>
+      <a class="res-phone" href="tel:18774705200">1-877-470-5200</a>
+      <a class="way-link" href="https://wesforyouthonline.ca/" target="_blank" rel="noopener">wesforyouthonline.ca <span aria-hidden="true">&#8599;</span></a>
+    </article>
+  </div>
+  <p class="res-note">Below is a list of organizations specializing in crises and counselling situations. When contacting any organization it is important to make an independent assessment of the organization and their qualifications.</p>
+</section>
+
+
+<!-- ==========================================================
+     COUNSELLING & SUPPORT GROUPS
+     ========================================================== -->
+<section class="plan sec">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <span class="kick">Counselling &amp; Support Groups</span>
+      <h2>Ongoing <span class="hot">support</span></h2>
+    </div>
+    <div class="ways ways--2">
+      <a class="way way--link reveal" href="https://docs.google.com/document/d/1IUiXeEpGnDDrXcyKv72C4zsDnFJJ3YlS2ELWhjeqknQ/edit" target="_blank" rel="noopener">
+        <h3>Counselling Services</h3>
+        <span class="way-link">Resources <span aria-hidden="true">&#8599;</span></span>
+      </a>
+      <a class="way way--link reveal" href="https://wearemovement.churchcenter.com/groups/programs/celebrate-recovery" target="_blank" rel="noopener">
+        <h3>Celebrate Recovery</h3>
+        <span class="way-link">Join Group <span aria-hidden="true">&#8599;</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     CLOSING - back to the Care page's two ways to connect
+     ========================================================== -->
+<section class="sec shell">
+  <div class="final">
+    <div>
+      <span class="kick final-kick">Care</span>
+      <h2>Need to connect with someone?</h2>
+      <p>We&rsquo;re here for you. Talk with a supporter or let our prayer team pray with you.</p>
+    </div>
+    <div class="final-btns">
+      <a class="pill" href="https://wearemovement.churchcenter.com/people/forms/411635">Talk with a supporter</a>
+      <a class="pill pill--ghost" href="https://wearemovement.churchcenter.com/people/forms/194030">Request prayer</a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+<!-- ==========================================================
+     FOOTER - same as index.html
+     ========================================================== -->
+<footer class="shell">
+  <div class="foot-grid">
+    <div class="foot-id">
+      <img src="img/logo.png" alt="Movement Church">
+      <address>
+        65 Lansdowne Ave<br>Woodstock, ON<br><br>
+        <a href="tel:+15195372211">(519) 537-2211</a><br>
+        <a href="mailto:info@wearemovement.ca">info@wearemovement.ca</a>
+      </address>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <span class="kick">Visit</span>
+        <a href="visit.html">Plan a visit</a>
+        <a href="about.html">About us</a>
+        <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+        <a href="baptism.html">Baptism</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">Family</span>
+        <a href="kids.html">Kids</a>
+        <a href="club56.html">Club 56</a>
+        <a href="youth.html">Youth</a>
+        <a href="groups.html">Groups</a>
+        <a href="teams.html">Teams</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">More</span>
+        <a href="care.html">Care &amp; support</a>
+        <a href="give.html">Give</a>
+        <a href="job-opportunities.html">Job opportunities</a>
+        <a href="https://www.youtube.com/@MovementChurchCanada/streams">Watch online</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-bot">
+    <small>&copy; 2026 Movement Church &middot; Woodstock, Ontario &middot; <a href="privacy.html">Privacy Policy</a> &middot; <button type="button" class="foot-link" data-cookie-settings>Cookie settings</button></small>
+    <div class="socs">
+      <a href="https://www.instagram.com/movement_church/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1 0 18.7 12 6.7 6.7 0 0 0 12 5.3zm0 11A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.2a1.6 1.6 0 1 1-1.6-1.6 1.6 1.6 0 0 1 1.6 1.6z"/></svg></a>
+      <a href="https://www.facebook.com/MovementChurchWoodstock" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://www.youtube.com/@MovementChurchCanada" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5a2.5 2.5 0 0 0-1.8 1.8C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM9.7 15.1V8.9l6.1 3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/consent.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/intro.js"></script>
+<!-- about.js fades sections in as you scroll -->
+<script src="js/about.js"></script>
+</body>
+</html>

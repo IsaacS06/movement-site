@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>About | Movement Church</title>
+<meta name="description" content="Our mission, values, history, beliefs and the team at Movement Church in Woodstock, Ontario. Established 1928.">
+
+<!-- Social sharing preview -->
+<meta property="og:title" content="About | Movement Church">
+<meta property="og:description" content="Passionately loving God within reach of others while impacting our community for Christ.">
+<meta property="og:image" content="https://www.wearemovement.ca/img/stage-wide.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Movement Church">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://www.wearemovement.ca/about.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/logo.png">
+<link rel="canonical" href="https://www.wearemovement.ca/about.html">
+<meta name="theme-color" content="#f6f7f5">
+<link rel="apple-touch-icon" href="img/logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+
+<!-- Page intro: decide before anything paints whether the "M" animation plays,
+     and switch on the left-to-right fade for the big word on the home page.
+     The intro plays once per visit. For testing, set TEST to true to play it on every reload. -->
+<script>try{var TEST=false,d=document.documentElement,calm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!calm)d.classList.add("word-tick");if((TEST||!sessionStorage.getItem("mvIntro"))&&!calm){d.classList.add("has-intro","intro-wait");sessionStorage.setItem("mvIntro","1")}}catch(e){}</script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css">
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.wearemovement.ca/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "About",
+   "item": "https://www.wearemovement.ca/about.html"
+  }
+ ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ==========================================================
+     PAGE INTRO - the "M" draws itself (see js/intro.js)
+     ========================================================== -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-bg"></div>
+  <div class="intro-mark">
+    <svg class="intro-svg" viewBox="0 0 400 380">
+      <!-- recolours the black logo; the colour is set in CSS (.intro-flood) -->
+      <filter id="introTint"><feFlood class="intro-flood"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+      <image class="intro-logo" href="img/logo.png" width="400" height="380" filter="url(#introTint)"/>
+      <!-- a thick line in the background colour hides the logo, then pulls back along the M -->
+      <path class="intro-cover" pathLength="1" d="M46 372 L75 70 L200 268 L325 70 L353 372"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ==========================================================
+     NAV - same as index.html, with links pointing back to it
+     ========================================================== -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-logo" href="index.html" aria-label="Movement Church home">
+      <img src="img/logo.png" alt=""><b>Movement Church</b>
+    </a>
+    <div class="nav-links" id="navMenu">
+      <a href="visit.html">Visit</a>
+      <div class="nav-group">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub1">Ministries<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub1">
+          <a href="kids.html">Movement Kids<small>Birth &ndash; Grade 4</small></a>
+          <a href="club56.html">Club 56<small>Grades 5 &amp; 6</small></a>
+          <a href="youth.html">Movement Youth<small>Grades 7&ndash;12</small></a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub2">Get involved<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub2">
+          <a href="groups.html">Groups<small>Find your people</small></a>
+          <a href="teams.html">Teams<small>Serve on a team</small></a>
+          <a href="baptism.html">Baptism<small>Go public with your faith</small></a>
+          <a href="care.html">Care<small>Prayer and support</small></a>
+          <a href="job-opportunities.html">Job Opportunities<small>Work with us</small></a>
+        </div>
+      </div>
+      <a href="about.html" aria-current="page">About</a>
+      <a href="give.html">Give</a>
+      <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+    </div>
+    <a class="pill" href="https://wearemovement.churchcenter.com/people/forms/989717">Plan a Visit</a>
+    <!-- phones and tablets: opens the links above as a dropdown (js/nav.js) -->
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+<nav class="crumbs shell" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">About</li></ol></nav>
+
+
+
+<!-- ==========================================================
+     HERO - mission statement beside a photo collage
+     ========================================================== -->
+<header class="about-hero shell">
+  <div class="about-hero-txt">
+    <span class="kick">About Movement Church</span>
+    <h1>We are <span class="tealt">Movement</span></h1>
+    <p class="about-lede">Passionately loving God within reach of others while impacting our community for Christ with authenticity, excellence, and devotion, at the same time empowering people on their journey toward and with God.</p>
+
+    <!-- Jump links to each section below -->
+    <ul class="jump" aria-label="On this page">
+      <li><a href="#values">Mission &amp; Vision</a></li>
+      <li><a href="#next-steps">Next Steps</a></li>
+      <li><a href="#history">History</a></li>
+      <li><a href="#beliefs">Beliefs</a></li>
+      <li><a href="#pastors">Lead Pastors</a></li>
+      <li><a href="#staff">Support Staff</a></li>
+    </ul>
+  </div>
+
+  <!-- Three overlapping photos. These are only used on this page, not on the home page -->
+  <div class="collage" aria-hidden="true">
+    <img class="collage-a" src="img/worship-hands-up.jpg" alt="">
+    <img class="collage-b" src="img/coffee-team.jpg" alt="">
+    <img class="collage-c" src="img/kids-team.jpg" alt="">
+    <span class="collage-badge">Est.<b>1928</b></span>
+  </div>
+</header>
+
+
+<!-- ==========================================================
+     VALUES TICKER - scrolling strip of the eight values.
+     The list is written twice so the loop is seamless.
+     ========================================================== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Move of the Holy Spirit</span><span>Others First</span><span>Creativity Driven</span><span>Encountering God in Worship</span><span>Making Disciples</span><span>Excellence</span><span>Next Generation-Minded</span><span>Teaching the Bible</span>
+    <span>Move of the Holy Spirit</span><span>Others First</span><span>Creativity Driven</span><span>Encountering God in Worship</span><span>Making Disciples</span><span>Excellence</span><span>Next Generation-Minded</span><span>Teaching the Bible</span>
+  </div>
+</div>
+
+
+<!-- ==========================================================
+     VALUES - the first letters spell MOVEMENT, so keep them in
+     this order. data-letter is the big letter on each card.
+     Each card has a photo (style="background-image:..."). All cards share
+     one look; the value--ink/teal/hot classes are no longer used for colour.
+     ========================================================== -->
+<!-- Outline for the big letters and numbers on this page. It outlines each letter as one
+     shape (a plain text-stroke shows seams where the font's E, T and 4 overlap). -->
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <filter id="outlineText">
+    <feMorphology in="SourceAlpha" operator="erode" radius="2" result="inside"/>
+    <feComposite in="SourceGraphic" in2="inside" operator="out"/>
+  </filter>
+</svg>
+
+<section class="sec shell" id="values">
+  <div class="sec-head reveal">
+    <span class="kick">Mission &amp; Vision</span>
+    <h2>What we <span class="hot">value</span></h2>
+    <p class="sub">Eight values, and together they spell our name.</p>
+    <p class="spell" aria-hidden="true"><span>M</span><span>O</span><span>V</span><span>E</span><span>M</span><span>E</span><span>N</span><span>T</span></p>
+  </div>
+
+  <ol class="values">
+    <li class="value value--ink reveal" style="background-image:url('img/altar-prayer.jpg')" data-letter="M">
+      <h3><span class="initial">M</span>ove of the Holy Spirit</h3>
+      <p>We depend on the leading of the Holy Spirit and create space for Him to move in every area of our church.</p>
+    </li>
+    <li class="value value--teal reveal" style="background-image:url('img/usher.jpg')" data-letter="O">
+      <h3><span class="initial">O</span>thers First</h3>
+      <p>We choose to serve and put the needs of others ahead of our own, following the example of Jesus.</p>
+    </li>
+    <li class="value value--ink reveal" style="background-image:url('img/production.jpg')" data-letter="V">
+      <h3><span class="initial">V</span>ideo, Media, and Creativity Driven</h3>
+      <p>We leverage creativity, technology, and media to communicate the gospel in fresh, compelling ways.</p>
+    </li>
+    <li class="value value--hot reveal" style="background-image:url('img/worship-students.jpg')" data-letter="E">
+      <h3><span class="initial">E</span>ncountering God in Worship</h3>
+      <p>We create environments where people can experience God&rsquo;s presence and respond to Him in heartfelt worship.</p>
+    </li>
+    <li class="value value--teal reveal" style="background-image:url('img/club56-room.jpg')" data-letter="M">
+      <h3><span class="initial">M</span>aking Disciples Through Groups and Volunteering</h3>
+      <p>We believe life change happens best in community and as people use their gifts to serve others.</p>
+    </li>
+    <li class="value value--ink reveal" style="background-image:url('img/guitarist.jpg')" data-letter="E">
+      <h3><span class="initial">E</span>xcellence: We Give Our Whole Heart</h3>
+      <p>We bring our very best to God, seeing whole hearted service as an act of worship.</p>
+    </li>
+    <li class="value value--hot reveal" style="background-image:url('img/kids-laughing.jpg')" data-letter="N">
+      <h3><span class="initial">N</span>ext Generation-Minded</h3>
+      <p>We intentionally lean young in our ministry, designing environments and making decisions with the next generation in mind. We invest in kids, students, and young adults, equipping them to follow Jesus and step into leadership now &mdash; not just someday in the future.</p>
+    </li>
+    <li class="value value--ink reveal" style="background-image:url('img/teaching.jpg')" data-letter="T">
+      <h3><span class="initial">T</span>eaching the Bible in Relevant Ways</h3>
+      <p>We communicate God&rsquo;s Word with clarity and practicality so it transforms lives today.</p>
+    </li>
+  </ol>
+</section>
+
+
+<!-- ==========================================================
+     NEXT STEPS - an interactive journey from "Attending" to
+     "Belonging". js/about.js turns the four steps into tabs that
+     play through on their own; without it all four just show.
+     To change a step: edit its <button> name AND its <article>.
+     ========================================================== -->
+<section class="dark sec" id="next-steps">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <span class="kick">4 sessions</span>
+      <h2>Next <span class="tealt">Steps</span></h2>
+      <p class="sub">Next Steps is how you move from simply attending to truly belonging at Movement Church. It&rsquo;s a clear and simple path to help you learn more about who we are, discover how God uniquely designed you, and take your next step&mdash;whether that&rsquo;s joining a team, finding community, or growing in your faith.</p>
+    </div>
+
+    <div class="journey" id="journey">
+      <div class="track-ends" aria-hidden="true"><span>Attending</span><span>Belonging</span></div>
+      <div class="track" role="tablist" aria-label="Next Steps sessions">
+        <span class="track-line" aria-hidden="true"><span class="track-fill" id="trackFill"></span></span>
+        <button class="stop" type="button" role="tab" id="stop-1" aria-controls="step-1" aria-selected="true">
+          <span class="stop-dot">01</span>
+          <span class="stop-name">Who is Movement Church?</span>
+          <span class="stop-timer" aria-hidden="true"></span>
+        </button>
+        <button class="stop" type="button" role="tab" id="stop-2" aria-controls="step-2" aria-selected="false" tabindex="-1">
+          <span class="stop-dot">02</span>
+          <span class="stop-name">Who does God say you are?</span>
+          <span class="stop-timer" aria-hidden="true"></span>
+        </button>
+        <button class="stop" type="button" role="tab" id="stop-3" aria-controls="step-3" aria-selected="false" tabindex="-1">
+          <span class="stop-dot">03</span>
+          <span class="stop-name">Be a part of something BIG</span>
+          <span class="stop-timer" aria-hidden="true"></span>
+        </button>
+        <button class="stop" type="button" role="tab" id="stop-4" aria-controls="step-4" aria-selected="false" tabindex="-1">
+          <span class="stop-dot">04</span>
+          <span class="stop-name">Go Deeper with God</span>
+          <span class="stop-timer" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <article class="step" id="step-1" role="tabpanel" aria-labelledby="stop-1">
+        <div class="step-img">
+          <img src="img/step-community.jpg" alt="A full room worshipping with hands raised" loading="lazy">
+          <span class="step-n" aria-hidden="true">01</span>
+        </div>
+        <div class="step-body">
+          <span class="step-of">Session 01 <span>/ 04</span></span>
+          <h3>Who is Movement Church?</h3>
+          <p>Discover the story, vision, and heartbeat of Movement Church, and see how you can belong to a community making a difference.</p>
+        </div>
+      </article>
+      <article class="step" id="step-2" role="tabpanel" aria-labelledby="stop-2">
+        <div class="step-img">
+          <img src="img/step-identity.jpg" alt="A worship leader singing under a single spotlight" loading="lazy">
+          <span class="step-n" aria-hidden="true">02</span>
+        </div>
+        <div class="step-body">
+          <span class="step-of">Session 02 <span>/ 04</span></span>
+          <h3>Who does God say you are?</h3>
+          <p>Learn about your true identity in Christ and what it means to live with purpose and confidence in Him.</p>
+        </div>
+      </article>
+      <article class="step" id="step-3" role="tabpanel" aria-labelledby="stop-3">
+        <div class="step-img">
+          <img src="img/step-serve.jpg" alt="A volunteer editing video at the production desk" loading="lazy">
+          <span class="step-n" aria-hidden="true">03</span>
+        </div>
+        <div class="step-body">
+          <span class="step-of">Session 03 <span>/ 04</span></span>
+          <h3>Be a part of something BIG</h3>
+          <p>Find out how you can use your gifts to serve, build relationships, and make an impact through the church.</p>
+        </div>
+      </article>
+      <article class="step" id="step-4" role="tabpanel" aria-labelledby="stop-4">
+        <div class="step-img">
+          <img src="img/step-deeper.jpg" alt="A raised hand silhouetted against orange stage lights" loading="lazy" style="object-position:center 30%">
+          <span class="step-n" aria-hidden="true">04</span>
+        </div>
+        <div class="step-body">
+          <span class="step-of">Session 04 <span>/ 04</span></span>
+          <h3>Go Deeper with God</h3>
+          <p>Take practical steps to grow in faith, develop spiritual habits, and walk closer with God every day.</p>
+        </div>
+      </article>
+
+      <div class="journey-nav">
+        <button class="jbtn" type="button" id="jPrev" aria-label="Previous session">&#8592;</button>
+        <button class="jbtn jbtn--next" type="button" id="jNext"><span id="jNextLabel">Next</span> <span aria-hidden="true">&#8594;</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     HISTORY - a photo shows through the big "1928", like the
+     big word on the home page. Then a three-point timeline.
+     ========================================================== -->
+<section class="sec shell" id="history">
+  <div class="history">
+    <div class="history-year reveal">
+      <span class="kick">History</span>
+      <p class="year-word" aria-hidden="true" style="background-image:url('img/stage-wide.jpg')">1928</p>
+      <h2 class="vh">Established 1928</h2>
+    </div>
+    <div class="history-txt reveal">
+      <p class="history-big">Movement Church has a rich history shaped by faith, vision, and a deep commitment to Woodstock.</p>
+      <p>What began decades ago as Calvary Church Woodstock was built by everyday people taking bold steps to serve their community and share hope. In 2020, we embraced a new name&mdash;Movement Church&mdash;to reflect a renewed vision: to help people find life in Jesus and live out their purpose.</p>
+      <p>Over the last decade, we&rsquo;ve grown from a church of 300 to a thriving community of over 1,000. Along the way, hundreds have made the decision to follow Jesus, find belonging, and live with purpose as part of this movement.</p>
+      <p>And we&rsquo;re just getting started. We&rsquo;re passionate about creating a space where people of all backgrounds can belong, grow, and make a difference. If you&rsquo;re looking for a place to be part of something meaningful, we&rsquo;d love to welcome you.</p>
+    </div>
+  </div>
+
+  <ol class="timeline reveal">
+    <li><b>1928</b><span>Founded as Calvary Church Woodstock</span></li>
+    <li><b>2020</b><span>Renamed Movement Church</span></li>
+    <li><b>Today</b><span>Grown from 300 to over 1,000 in a decade</span></li>
+  </ol>
+</section>
+
+
+<!-- ==========================================================
+     BELIEFS - heading stays put on the left while the list
+     scrolls on the right. Each one opens and closes.
+     ========================================================== -->
+<section class="plan sec" id="beliefs">
+  <div class="shell beliefs">
+    <div class="sec-head beliefs-head">
+      <span class="kick">Beliefs</span>
+      <h2>What we <span class="tealt">believe</span></h2>
+      <p class="sub">At Movement Church, our beliefs are rooted in the Bible and shaped by our identity as a Pentecostal church. We hold to the core truths of the Christian faith and believe in the active work of the Holy Spirit in the lives of believers today.</p>
+      <p class="sub">Our faith is centered on Jesus Christ, the authority of Scripture, and the life-transforming power of the gospel. We embrace the Spirit-empowered life, believing that God still speaks, moves, and works through His people to bring hope and healing to the world.</p>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>About the Bible</summary>
+        <p>We believe that the scriptures of the Old and New Testaments are the inspired Word of God and that men were moved by the Spirit of God to write the very words of Scripture. Therefore, we believe the Bible is without error. <span class="ref">2 Timothy 3:16&ndash;17 &amp; 2 Peter 1:20&ndash;21</span></p>
+      </details>
+      <details>
+        <summary>About Mankind</summary>
+        <p>We believe that all people were created in the image of God to have fellowship with him but became alienated in that relationship through sinful disobedience. As a result, people are incapable of regaining a right relationship with God through their own efforts.</p>
+      </details>
+      <details>
+        <summary>About God</summary>
+        <p>We believe in one personal God who exists eternally in three distinct persons: Father, Son, and Holy Spirit, equal in power, authority and glory.</p>
+      </details>
+      <details>
+        <summary>About Salvation</summary>
+        <p>We believe that the blood of Jesus Christ, shed on the cross, provides the only way for the forgiveness of sin. God freely offers salvation to those who place their faith in the death and resurrection of Christ as sufficient payment for their sin. Salvation cannot be earned, it is a gift from God.</p>
+      </details>
+      <details>
+        <summary>About Jesus</summary>
+        <p>We believe Jesus Christ to be the virgin-born Son of God who lived in flesh, died for the sins of the world, was buried, rose again bodily, and ascended to the Father.</p>
+      </details>
+      <details>
+        <summary>About the Church</summary>
+        <p>We believe in the universal church, the body of Christ, of which Jesus Christ is the head. The members of the church are those who have trusted by faith in the finished work of Christ. The purpose of the church is to glorify God by loving him, obeying Him and bringing the gospel to the world.</p>
+      </details>
+      <details>
+        <summary>About the Holy Spirit</summary>
+        <p>We believe in the Holy Spirit who regenerates and indwells every believer in Jesus, assures us of our salvation, guides us into all truth, glorifies Jesus and convicts of sin, righteousness and judgment. He comforts us, gives us spiritual gifts, and empowers us for service.</p>
+      </details>
+      <details>
+        <summary>About Eternity</summary>
+        <p>We believe in the personal, visible return of Christ to the earth and the establishing of His Kingdom, in the resurrection of the body, and the final judgment. We believe that our eternal destination of either heaven or hell is determined by our response to the Lord Jesus Christ.</p>
+      </details>
+      <details>
+        <summary>About Marriage</summary>
+        <p>We believe that marriage is a lifelong covenant established by God between one man and one woman. It is a sacred union designed to reflect Christ&rsquo;s relationship with His Church. We believe that sexual intimacy is a gift from God, reserved exclusively for marriage, and that all sexual activity outside of this covenant is contrary to God&rsquo;s design.</p>
+      </details>
+      <details>
+        <summary>About Sexuality</summary>
+        <p>We believe that God created humanity in His image as male and female, two distinct and complementary genders. Our sexuality is a gift from God that reflects His design and purpose. We believe that true human flourishing comes when we live within His created intent, honouring Him with our bodies and relationships.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     LEAD PASTORS - photo on a coloured block, pull quote
+     ========================================================== -->
+<section class="sec shell" id="pastors">
+  <div class="pastors">
+    <div class="pastors-img reveal">
+      <img src="img/staff/jeff-amber-price.jpg" alt="Pastors Jeff and Amber Price">
+    </div>
+    <div class="pastors-txt reveal">
+      <span class="kick">Lead Pastors</span>
+      <h2>Pastors Jeff &amp; <span class="tealt">Amber Price</span></h2>
+      <blockquote class="pull">&ldquo;Within reach of those who feel far from God.&rdquo;</blockquote>
+      <p>Jeff and Amber Price serve as the Lead Pastors of Movement Church in Woodstock, Ontario. Their heart is to live a life that is within reach of those who feel far from God, while also equipping leaders who are passionate about making a difference in their communities.</p>
+      <p>They are known for their authentic communication style, using humour, real-life stories, and biblical truth to connect with people and inspire spiritual growth. Jeff brings a background in missions, evangelism, and leadership, along with a personal testimony of God&rsquo;s power to deliver, heal, and restore. Amber leads with a deep love for people and a unique ability to build healthy teams and a strong sense of culture.</p>
+      <p>Together, they are committed to leading a vibrant church and raising their four incredible kids to live boldly for Jesus and become leaders in their generation.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     SUPPORT STAFF
+     To add someone: copy one <li> block, put their photo in
+     img/staff/ (cropped square, chest up), and change the name and role.
+     ========================================================== -->
+<section class="sec shell pt0" id="staff">
+  <div class="sec-head reveal">
+    <span class="kick">Support Staff</span>
+    <h2>The <span class="hot">team</span></h2>
+  </div>
+
+  <ul class="staff">
+    <li class="person reveal"><div class="person-img"><img src="img/staff/natalie-dickert.jpg" alt="Pastor Natalie Dickert" loading="lazy"></div><h3>Pastor Natalie Dickert</h3><p>Kids Ministry</p></li>
+    <li class="person reveal"><div class="person-img"><img src="img/staff/isaiah-belleth.jpg" alt="Pastor Isaiah Belleth" loading="lazy"></div><h3>Pastor Isaiah Belleth</h3><p>Youth Ministry</p></li>
+    <li class="person reveal"><div class="person-img"><img src="img/staff/jeremiah-doggart.jpg" alt="Jeremiah Doggart" loading="lazy"></div><h3>Jeremiah Doggart</h3><p>Worship Leader</p></li>
+    <li class="person reveal"><div class="person-img"><img src="img/staff/ken-mcdonald.jpg" alt="Ken McDonald" loading="lazy"></div><h3>Ken McDonald</h3><p>Care Pastor</p></li>
+    <li class="person reveal"><div class="person-img"><img src="img/staff/isaac-street.jpg" alt="Isaac Street" loading="lazy"></div><h3>Isaac Street</h3><p>Media &amp; Communications</p></li>
+    <li class="person reveal"><div class="person-img"><img src="img/staff/chris-deller.jpg" alt="Chris Deller" loading="lazy"></div><h3>Chris Deller</h3><p>Production</p></li>
+    <li class="person reveal"><div class="person-img"><img src="img/staff/melissa-bartley.jpg" alt="Melissa Bartley" loading="lazy"></div><h3>Melissa Bartley</h3><p>Admin</p></li>
+    <li class="person reveal"><div class="person-img"><img src="img/staff/tania-mahoney.jpg" alt="Tania Mahoney" loading="lazy"></div><h3>Tania Mahoney</h3><p>Finances</p></li>
+    <li class="person reveal"><div class="person-img"><img src="img/staff/jason-giesbrecht.jpg" alt="Jason Giesbrecht" loading="lazy"></div><h3>Jason Giesbrecht</h3><p>Production</p></li>
+  </ul>
+</section>
+
+
+<!-- ==========================================================
+     CLOSING CALL TO ACTION
+     ========================================================== -->
+<section class="sec shell pt0">
+  <div class="final">
+    <div>
+      <h2>Come be in the room</h2>
+      <p>Tell us you&rsquo;re coming and someone will be watching for you at the doors. Or just turn up on Sunday &mdash; that works too.</p>
+    </div>
+    <div class="final-btns">
+      <a class="pill" href="https://wearemovement.churchcenter.com/people/forms/989717">Plan a Visit</a>
+      <a class="pill pill--ghost" href="https://maps.google.com/?q=65+Lansdowne+Ave,+Woodstock,+ON">Get directions</a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+<!-- ==========================================================
+     FOOTER - same as index.html
+     ========================================================== -->
+<footer class="shell">
+  <div class="foot-grid">
+    <div class="foot-id">
+      <img src="img/logo.png" alt="Movement Church">
+      <address>
+        65 Lansdowne Ave<br>Woodstock, ON<br><br>
+        <a href="tel:+15195372211">(519) 537-2211</a><br>
+        <a href="mailto:info@wearemovement.ca">info@wearemovement.ca</a>
+      </address>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <span class="kick">Visit</span>
+        <a href="visit.html">Plan a visit</a>
+        <a href="about.html">About us</a>
+        <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+        <a href="baptism.html">Baptism</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">Family</span>
+        <a href="kids.html">Kids</a>
+        <a href="club56.html">Club 56</a>
+        <a href="youth.html">Youth</a>
+        <a href="groups.html">Groups</a>
+        <a href="teams.html">Teams</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">More</span>
+        <a href="care.html">Care &amp; support</a>
+        <a href="give.html">Give</a>
+        <a href="job-opportunities.html">Job opportunities</a>
+        <a href="https://www.youtube.com/@MovementChurchCanada/streams">Watch online</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-bot">
+    <small>&copy; 2026 Movement Church &middot; Woodstock, Ontario &middot; <a href="privacy.html">Privacy Policy</a> &middot; <button type="button" class="foot-link" data-cookie-settings>Cookie settings</button></small>
+    <div class="socs">
+      <a href="https://www.instagram.com/movement_church/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1 0 18.7 12 6.7 6.7 0 0 0 12 5.3zm0 11A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.2a1.6 1.6 0 1 1-1.6-1.6 1.6 1.6 0 0 1 1.6 1.6z"/></svg></a>
+      <a href="https://www.facebook.com/MovementChurchWoodstock" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://www.youtube.com/@MovementChurchCanada" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5a2.5 2.5 0 0 0-1.8 1.8C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM9.7 15.1V8.9l6.1 3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/consent.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/intro.js"></script>
+<!-- Fades sections in as you scroll. The page works fine without it. -->
+<script src="js/about.js"></script>
+</body>
+</html>

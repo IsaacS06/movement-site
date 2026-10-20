@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Teams | Movement Church</title>
+<meta name="description" content="Join a team at Movement Church. Ten ways to serve, from Connections and Kids to Worship, Production and Local Missions.">
+
+<!-- Social sharing preview -->
+<meta property="og:title" content="Teams | Movement Church">
+<meta property="og:description" content="Join a team at Movement Church. Ten ways to serve, from Connections and Kids to Worship, Production and Local Missions.">
+<meta property="og:image" content="https://www.wearemovement.ca/img/teams-greeters.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Movement Church">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://www.wearemovement.ca/teams.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/logo.png">
+<link rel="canonical" href="https://www.wearemovement.ca/teams.html">
+<meta name="theme-color" content="#f6f7f5">
+<link rel="apple-touch-icon" href="img/logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+
+<!-- Page intro: decide before anything paints whether the "M" animation plays,
+     and switch on the left-to-right fade for the big word on the home page.
+     The intro plays once per visit. For testing, set TEST to true to play it on every reload. -->
+<script>try{var TEST=false,d=document.documentElement,calm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!calm)d.classList.add("word-tick");if((TEST||!sessionStorage.getItem("mvIntro"))&&!calm){d.classList.add("has-intro","intro-wait");sessionStorage.setItem("mvIntro","1")}}catch(e){}</script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css">
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.wearemovement.ca/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Teams",
+   "item": "https://www.wearemovement.ca/teams.html"
+  }
+ ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ==========================================================
+     PAGE INTRO - the "M" draws itself (see js/intro.js)
+     ========================================================== -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-bg"></div>
+  <div class="intro-mark">
+    <svg class="intro-svg" viewBox="0 0 400 380">
+      <!-- recolours the black logo; the colour is set in CSS (.intro-flood) -->
+      <filter id="introTint"><feFlood class="intro-flood"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+      <image class="intro-logo" href="img/logo.png" width="400" height="380" filter="url(#introTint)"/>
+      <!-- a thick line in the background colour hides the logo, then pulls back along the M -->
+      <path class="intro-cover" pathLength="1" d="M46 372 L75 70 L200 268 L325 70 L353 372"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ==========================================================
+     NAV - same as index.html, with links pointing back to it
+     ========================================================== -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-logo" href="index.html" aria-label="Movement Church home">
+      <img src="img/logo.png" alt=""><b>Movement Church</b>
+    </a>
+    <div class="nav-links" id="navMenu">
+      <a href="visit.html">Visit</a>
+      <div class="nav-group">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub1">Ministries<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub1">
+          <a href="kids.html">Movement Kids<small>Birth &ndash; Grade 4</small></a>
+          <a href="club56.html">Club 56<small>Grades 5 &amp; 6</small></a>
+          <a href="youth.html">Movement Youth<small>Grades 7&ndash;12</small></a>
+        </div>
+      </div>
+      <div class="nav-group is-current">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub2">Get involved<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub2">
+          <a href="groups.html">Groups<small>Find your people</small></a>
+          <a href="teams.html" aria-current="page">Teams<small>Serve on a team</small></a>
+          <a href="baptism.html">Baptism<small>Go public with your faith</small></a>
+          <a href="care.html">Care<small>Prayer and support</small></a>
+          <a href="job-opportunities.html">Job Opportunities<small>Work with us</small></a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="give.html">Give</a>
+      <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+    </div>
+    <a class="pill" href="https://wearemovement.churchcenter.com/people/forms/989717">Plan a Visit</a>
+    <!-- phones and tablets: opens the links above as a dropdown (js/nav.js) -->
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+<nav class="crumbs shell" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Teams</li></ol></nav>
+
+
+
+<!-- ==========================================================
+     HERO
+     The "Join a Team" form link appears several times on this
+     page - search for forms/989562 to change them all.
+     ========================================================== -->
+<header class="give-hero shell">
+  <div class="give-hero-txt">
+    <span class="kick">Teams</span>
+    <h1>Join a <span class="hot">team</span></h1>
+    <p class="about-lede">Getting involved is one of the best steps you can take. When you serve, you&rsquo;re not only building relationships and finding community &mdash; you&rsquo;re becoming part of what God is doing through our church. It&rsquo;s a powerful way to grow in your faith and make a real impact in the lives of others.</p>
+    <div class="hero-cta give-cta">
+      <a class="pill pill--hot" href="https://wearemovement.churchcenter.com/people/forms/989562">Join a Team</a>
+      <a class="pill pill--ghost" href="#teams">See the teams <span aria-hidden="true">&#8595;</span></a>
+    </div>
+  </div>
+  <div class="give-hero-img">
+    <img src="img/teams-greeters.jpg" alt="Volunteers in lanyards chatting in the lobby">
+  </div>
+</header>
+
+
+<!-- ==========================================================
+     TICKER - the three lines from the old page, scrolling
+     ========================================================== -->
+<div class="ticker ticker--big" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Be a part of what God&rsquo;s doing</span><span>Join a team</span><span>You were made for community</span>
+    <span>Be a part of what God&rsquo;s doing</span><span>Join a team</span><span>You were made for community</span>
+  </div>
+</div>
+
+
+<!-- ==========================================================
+     THE TEAMS - photo cards where we have a photo, plain cards
+     for the rest. Each one links to the sign-up form.
+     ========================================================== -->
+<section class="sec shell" id="teams">
+  <div class="sec-head reveal">
+    <span class="kick">Find your place</span>
+    <h2>Ten ways to <span class="tealt">serve</span></h2>
+  </div>
+
+  <div class="team-grid">
+    <a class="team team--photo reveal" href="https://wearemovement.churchcenter.com/people/forms/989562" style="background-image:url('img/teams-parking.jpg')">
+      <h3>Connections</h3>
+      <p>You&rsquo;re the first impression people receive at Movement Church. Whether it&rsquo;s parking, greeting, serving in the caf&eacute;, or ushering &mdash; you help create a warm and welcoming environment that sets the tone for Sundays and Wednesday nights.</p>
+    </a>
+    <a class="team reveal" href="kids.html">
+      <h3>Kids</h3>
+      <p>Our Kids Ministry is all about planting seeds of faith in the next generation. Serve on Sunday mornings by creating a fun, safe, and meaningful space where children can learn about Jesus in ways they&rsquo;ll remember forever.</p>
+      <span class="way-link">More info <span aria-hidden="true">&#8594;</span></span>
+    </a>
+    <a class="team reveal" href="youth.html">
+      <h3>Youth</h3>
+      <p>Join the Movement Youth team and make a real impact in the next generation! Serve every Wednesday as we lead, mentor, and inspire students to grow in faith, fun, and community.</p>
+      <span class="way-link">More info <span aria-hidden="true">&#8594;</span></span>
+    </a>
+    <a class="team team--photo reveal" href="https://wearemovement.churchcenter.com/people/forms/989562" style="background-image:url('img/teams-worship.jpg')">
+      <h3>Worship</h3>
+      <p>Are you gifted musically &mdash; vocally or instrumentally? Our Worship Team is always looking for talented and passionate individuals who feel called to lead others into the presence of God through music and praise.</p>
+    </a>
+    <a class="team team--photo reveal" href="https://wearemovement.churchcenter.com/people/forms/989562" style="background-image:url('img/teams-production.jpg')">
+      <h3>Production</h3>
+      <p>In today&rsquo;s digital age, our online and in-person experiences are deeply connected. Join the Production Team to run cameras, lighting, audio, or slides &mdash; helping ensure each experience is excellent and accessible to all.</p>
+    </a>
+    <a class="team team--photo reveal" href="https://wearemovement.churchcenter.com/people/forms/989562" style="background-image:url('img/teams-events.jpg')">
+      <h3>Special Events</h3>
+      <p>From conferences and parties to outreach and celebrations, we go all out. If you&rsquo;re organized, love planning, or just enjoy rolling up your sleeves to help things run smoothly, this is a great place to serve and make big things happen.</p>
+    </a>
+    <a class="team team--photo reveal" href="https://wearemovement.churchcenter.com/people/forms/989562" style="background-image:url('img/teams-missions.jpg')">
+      <h3>Local Missions</h3>
+      <p>Be the hands and feet of Jesus in Oxford County. Whether it&rsquo;s handing out care packages, running community nights, or serving those in need &mdash; the Local Missions team is all about practical love and real impact.</p>
+    </a>
+    <a class="team reveal" href="https://wearemovement.churchcenter.com/people/forms/989562">
+      <h3>Maintenance</h3>
+      <p>Got skills in repairs, construction, or just love fixing things? From lightbulbs and painting to bigger projects like drywall or renos &mdash; the Maintenance Team helps keep our facilities safe, functional, and beautiful.</p>
+    </a>
+    <a class="team reveal" href="https://wearemovement.churchcenter.com/people/forms/989562">
+      <h3>Finances</h3>
+      <p>Our Finance Team plays a vital behind-the-scenes role in making ministry happen. If you&rsquo;re detail-oriented, trustworthy, and passionate about stewarding resources well, this team helps ensure everything runs with excellence.</p>
+    </a>
+    <a class="team reveal" href="https://wearemovement.churchcenter.com/people/forms/989562">
+      <h3>Leadership</h3>
+      <p>Do you feel a call to lead? Whether it&rsquo;s launching a small group, mentoring others, or serving in a leadership capacity like our board, this team is for those ready to step into a deeper level of responsibility and spiritual impact.</p>
+    </a>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     CLOSING
+     ========================================================== -->
+<section class="sec shell pt0">
+  <div class="final">
+    <div>
+      <h2>You were made for community</h2>
+      <p>Be a part of what God&rsquo;s doing. Tell us where you&rsquo;d like to serve and someone will connect with you.</p>
+    </div>
+    <div class="final-btns">
+      <a class="pill" href="https://wearemovement.churchcenter.com/people/forms/989562">Join a Team</a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+<!-- ==========================================================
+     FOOTER - same as index.html
+     ========================================================== -->
+<footer class="shell">
+  <div class="foot-grid">
+    <div class="foot-id">
+      <img src="img/logo.png" alt="Movement Church">
+      <address>
+        65 Lansdowne Ave<br>Woodstock, ON<br><br>
+        <a href="tel:+15195372211">(519) 537-2211</a><br>
+        <a href="mailto:info@wearemovement.ca">info@wearemovement.ca</a>
+      </address>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <span class="kick">Visit</span>
+        <a href="visit.html">Plan a visit</a>
+        <a href="about.html">About us</a>
+        <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+        <a href="baptism.html">Baptism</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">Family</span>
+        <a href="kids.html">Kids</a>
+        <a href="club56.html">Club 56</a>
+        <a href="youth.html">Youth</a>
+        <a href="groups.html">Groups</a>
+        <a href="teams.html">Teams</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">More</span>
+        <a href="care.html">Care &amp; support</a>
+        <a href="give.html">Give</a>
+        <a href="job-opportunities.html">Job opportunities</a>
+        <a href="https://www.youtube.com/@MovementChurchCanada/streams">Watch online</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-bot">
+    <small>&copy; 2026 Movement Church &middot; Woodstock, Ontario &middot; <a href="privacy.html">Privacy Policy</a> &middot; <button type="button" class="foot-link" data-cookie-settings>Cookie settings</button></small>
+    <div class="socs">
+      <a href="https://www.instagram.com/movement_church/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1 0 18.7 12 6.7 6.7 0 0 0 12 5.3zm0 11A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.2a1.6 1.6 0 1 1-1.6-1.6 1.6 1.6 0 0 1 1.6 1.6z"/></svg></a>
+      <a href="https://www.facebook.com/MovementChurchWoodstock" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://www.youtube.com/@MovementChurchCanada" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5a2.5 2.5 0 0 0-1.8 1.8C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM9.7 15.1V8.9l6.1 3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/consent.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/intro.js"></script>
+<!-- about.js fades sections in as you scroll -->
+<script src="js/about.js"></script>
+</body>
+</html>

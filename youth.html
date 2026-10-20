@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Movement Youth | Movement Church</title>
+<meta name="description" content="Movement Youth is a place for Grades 7-12 to be known and belong. Every Wednesday, 6:30-8:30pm, in Woodstock, Ontario.">
+
+<!-- Social sharing preview -->
+<meta property="og:title" content="Movement Youth | Movement Church">
+<meta property="og:description" content="Movement Youth is a place for Grades 7-12 to be known and belong. Every Wednesday, 6:30-8:30pm, in Woodstock, Ontario.">
+<meta property="og:image" content="https://www.wearemovement.ca/img/youth-room.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Movement Church">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://www.wearemovement.ca/youth.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/logo.png">
+<link rel="canonical" href="https://www.wearemovement.ca/youth.html">
+<meta name="theme-color" content="#f6f7f5">
+<link rel="apple-touch-icon" href="img/logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+
+<!-- Page intro: decide before anything paints whether the "M" animation plays,
+     and switch on the left-to-right fade for the big word on the home page.
+     The intro plays once per visit. For testing, set TEST to true to play it on every reload. -->
+<script>try{var TEST=false,d=document.documentElement,calm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!calm)d.classList.add("word-tick");if((TEST||!sessionStorage.getItem("mvIntro"))&&!calm){d.classList.add("has-intro","intro-wait");sessionStorage.setItem("mvIntro","1")}}catch(e){}</script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css">
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.wearemovement.ca/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Movement Youth",
+   "item": "https://www.wearemovement.ca/youth.html"
+  }
+ ]
+}
+</script>
+</head>
+
+<body class="youth-page">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ==========================================================
+     PAGE INTRO - the "M" draws itself (see js/intro.js)
+     ========================================================== -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-bg"></div>
+  <div class="intro-mark">
+    <svg class="intro-svg" viewBox="0 0 400 380">
+      <!-- recolours the black logo; the colour is set in CSS (.intro-flood) -->
+      <filter id="introTint"><feFlood class="intro-flood"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+      <image class="intro-logo" href="img/logo.png" width="400" height="380" filter="url(#introTint)"/>
+      <!-- a thick line in the background colour hides the logo, then pulls back along the M -->
+      <path class="intro-cover" pathLength="1" d="M46 372 L75 70 L200 268 L325 70 L353 372"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ==========================================================
+     NAV - same as index.html, with links pointing back to it
+     ========================================================== -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-logo" href="index.html" aria-label="Movement Church home">
+      <img src="img/logo.png" alt=""><b>Movement Church</b>
+    </a>
+    <div class="nav-links" id="navMenu">
+      <a href="visit.html">Visit</a>
+      <div class="nav-group is-current">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub1">Ministries<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub1">
+          <a href="kids.html">Movement Kids<small>Birth &ndash; Grade 4</small></a>
+          <a href="club56.html">Club 56<small>Grades 5 &amp; 6</small></a>
+          <a href="youth.html" aria-current="page">Movement Youth<small>Grades 7&ndash;12</small></a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub2">Get involved<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub2">
+          <a href="groups.html">Groups<small>Find your people</small></a>
+          <a href="teams.html">Teams<small>Serve on a team</small></a>
+          <a href="baptism.html">Baptism<small>Go public with your faith</small></a>
+          <a href="care.html">Care<small>Prayer and support</small></a>
+          <a href="job-opportunities.html">Job Opportunities<small>Work with us</small></a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="give.html">Give</a>
+      <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+    </div>
+    <a class="pill" href="https://wearemovement.churchcenter.com/people/forms/989717">Plan a Visit</a>
+    <!-- phones and tablets: opens the links above as a dropdown (js/nav.js) -->
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+<nav class="crumbs shell" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Movement Youth</li></ol></nav>
+
+
+
+<!-- Outline for the big "YOUTH" lettering (one clean ring per letter) -->
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+  <filter id="outlineText">
+    <feMorphology in="SourceAlpha" operator="erode" radius="2" result="inside"/>
+    <feComposite in="SourceGraphic" in2="inside" operator="out"/>
+  </filter>
+</svg>
+
+<!-- ==========================================================
+     HERO - the youth video plays behind the title on larger
+     screens (js/youth.js loads it); phones get the still image.
+     ========================================================== -->
+<header class="y-hero">
+  <video class="y-hero-video" id="youthVideo" muted loop playsinline poster="media/youth-loop.jpg" data-src="media/youth-loop.mp4" aria-hidden="true"></video>
+  <div class="y-hero-shade" aria-hidden="true"></div>
+
+  <div class="y-hero-in shell">
+    <span class="y-kick">A place you are known.</span>
+    <h1 class="y-title"><span>Movement</span><span class="y-title-out">Youth</span></h1>
+
+    <div class="y-hero-row">
+      <div class="y-cta">
+        <a class="y-btn y-btn--lime" href="https://wearemovement.churchcenter.com/people/forms/1047399">Plan a visit</a>
+        <a class="y-btn y-btn--ghost" href="#about">About us</a>
+      </div>
+      <p class="y-count" id="youthCount" aria-live="off">
+        <span class="y-count-label">Next youth night</span>
+        <span class="y-count-time" id="youthCountTime">Wednesday 6:30pm</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- spinning badge -->
+  <div class="y-badge" aria-hidden="true">
+    <svg viewBox="0 0 200 200">
+      <defs><path id="yBadgeCircle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+      <text><textPath href="#yBadgeCircle">EVERY WEDNESDAY &#10022; 6:30&ndash;8:30PM &#10022; GRADES 7&ndash;12 &#10022;</textPath></text>
+    </svg>
+    <span class="y-badge-mid">WED</span>
+  </div>
+</header>
+
+
+<!-- ==========================================================
+     MARQUEE - two lines scrolling opposite ways
+     ========================================================== -->
+<div class="y-marquee" aria-hidden="true">
+  <div class="y-marquee-row">
+    <div class="y-marquee-track">
+      <span>You are known</span><span>You belong</span><span>You are known</span><span>You belong</span>
+      <span>You are known</span><span>You belong</span><span>You are known</span><span>You belong</span>
+    </div>
+  </div>
+  <div class="y-marquee-row y-marquee-row--back">
+    <div class="y-marquee-track">
+      <span>Grades 7&ndash;12</span><span>Wednesdays</span><span>Come as you are</span><span>Bring a friend</span>
+      <span>Grades 7&ndash;12</span><span>Wednesdays</span><span>Come as you are</span><span>Bring a friend</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ==========================================================
+     ABOUT
+     ========================================================== -->
+<section class="y-sec y-about shell" id="about">
+  <div class="y-about-txt reveal">
+    <span class="y-kick">About us</span>
+    <h2>You are known.<br><span class="y-hl">You belong.</span></h2>
+    <p>Movement Youth is a place for students in Grades 7&ndash;12 to be seen, valued, and connected.</p>
+    <p>We gather every Wednesday from (6:30pm - 8:30pm) to build friendships, explore faith, and grow together. No matter your story, this is a place where you can belong and discover purpose.</p>
+    <a class="y-btn y-btn--lime" href="https://wearemovement.churchcenter.com/people/forms/1047399">Get involved</a>
+  </div>
+  <div class="y-about-art">
+    <img class="y-float" data-speed="-0.08" src="img/youth-collage-1.png" alt="Photos from Movement Youth: games outside, karaoke and hanging out" loading="lazy">
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     WEDNESDAY NIGHTS - a ticket
+     ========================================================== -->
+<section class="y-sec shell">
+  <div class="y-ticket reveal">
+    <div class="y-ticket-stub">
+      <span class="y-ticket-day">WED</span>
+      <span class="y-ticket-time">6:30&ndash;8:30pm</span>
+      <span class="y-ticket-where">65 Lansdowne Ave<br>Woodstock, ON</span>
+    </div>
+    <div class="y-ticket-main">
+      <span class="y-kick">Join us Wednesday nights</span>
+      <h2>Everyone is welcome</h2>
+      <p>Grades 7&ndash;12 meet every Wednesday from 6:30&ndash;8:30pm at Movement Church. Everyone is welcome &mdash; just come as you are. Want to stay in the loop? Tap below.</p>
+      <a class="y-btn y-btn--lime" href="https://wearemovement.churchcenter.com/people/forms/1047399">Plan a visit</a>
+      <p class="y-small"><strong>Automatic updates sign-up.</strong> When you attend Movement Youth or fill out a Plan Your Visit form, you&rsquo;ll automatically be added to receive email and text updates with weekly reminders, event info, and everything happening at Movement Youth.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     3 TYPES OF NIGHTS - cards tilt toward the mouse (js/youth.js)
+     ========================================================== -->
+<section class="y-sec shell">
+  <div class="y-head reveal">
+    <span class="y-kick">What to expect</span>
+    <h2>3 types of <span class="y-hl">nights</span></h2>
+  </div>
+  <div class="y-nights">
+    <article class="y-night y-night--purple reveal" data-tilt>
+      <span class="y-night-n">01</span>
+      <span class="y-night-tag">Discipleship</span>
+      <h3>Mentorship</h3>
+      <p>Mentorship Nights are focused on helping students grow personally and spiritually through meaningful conversations. Instead of just hanging out, students connect intentionally with leaders and mentors who encourage, challenge, and guide them in their faith. These nights create space for honest questions, deeper reflection, and real discipleship so students feel known, supported, and strengthened in their walk with Jesus.</p>
+    </article>
+    <article class="y-night y-night--lime reveal" data-tilt>
+      <span class="y-night-n">02</span>
+      <span class="y-night-tag">Opportunity</span>
+      <h3>Worship</h3>
+      <p>Worship Nights are dedicated to creating space to encounter God together through worship, prayer, and reflection. Students are invited to actively participate &mdash; not just attend &mdash; by leading, serving, sharing, and using their gifts. These evenings help students experience God&rsquo;s presence in a deeper way while growing in confidence and leadership as worshippers.</p>
+    </article>
+    <article class="y-night y-night--pink reveal" data-tilt>
+      <span class="y-night-n">03</span>
+      <span class="y-night-tag">Invite focused</span>
+      <h3>Games</h3>
+      <p>Games Nights are high-energy, fun, and welcoming events designed to help students build friendships and feel like they belong. Through creative themes, team challenges, and lots of laughter, these nights create an easy and comfortable environment for new students to connect. They&rsquo;re perfect for inviting friends and building relationships that often lead to deeper conversations and spiritual growth.</p>
+    </article>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     PHOTOS + SOCIALS
+     ========================================================== -->
+<section class="y-sec y-wall">
+  <div class="y-wall-art" aria-hidden="true">
+    <img class="y-float y-wall-a" data-speed="0.06" src="img/youth-collage-2.png" alt="" loading="lazy">
+    <img class="y-float y-wall-b" data-speed="-0.05" src="img/youth-collage-3.png" alt="" loading="lazy">
+  </div>
+  <div class="y-wall-in shell reveal">
+    <span class="y-kick">Contact</span>
+    <h2>Stay connected with Movement Youth on socials</h2>
+    <a class="y-handle" href="https://www.instagram.com/movement_youth/" target="_blank" rel="noopener">@movement_youth <span aria-hidden="true">&#8599;</span></a>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     DONATE
+     ========================================================== -->
+<section class="y-sec shell">
+  <div class="y-give reveal">
+    <img class="y-give-img" src="img/youth-room.jpg" alt="Students at Movement Youth" loading="lazy">
+    <div class="y-give-txt">
+      <span class="y-kick">Donate</span>
+      <h2>When you give, you help change lives.</h2>
+      <p>Your support helps provide weekly programs, mentorship, events, resources, and opportunities for students to grow in faith and community.</p>
+      <p>If you&rsquo;d like to give directly to Movement Youth, you&rsquo;re always welcome to bring cash on a Wednesday night. You can also give by e-transfer to give@wearemovement.ca. Please be sure to include &ldquo;Movement Youth&rdquo; in the memo so your gift is directed to the youth ministry.</p>
+      <p>Thank you for investing in the next generation &mdash; your generosity truly makes a difference.</p>
+      <div class="y-cta">
+        <button class="y-btn y-btn--lime copy" type="button" data-copy="give@wearemovement.ca">Copy e-transfer email</button>
+        <a class="y-btn y-btn--ghost" href="give.html">Learn more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     FAQ - the search box filters the questions (js/youth.js)
+     ========================================================== -->
+<section class="y-sec shell" id="faq">
+  <div class="y-head reveal">
+    <span class="y-kick">FAQ</span>
+    <h2>Frequently asked <span class="y-hl">questions</span></h2>
+  </div>
+  <label class="y-search">
+    <span class="vh">Search the questions</span>
+    <input type="search" id="youthSearch" placeholder="Search questions&hellip; (try &ldquo;cost&rdquo; or &ldquo;parents&rdquo;)" autocomplete="off">
+  </label>
+  <p class="y-noresult" id="youthNoResult" hidden>No questions match that. Email <a href="mailto:isaiah@wearemovement.ca">isaiah@wearemovement.ca</a> and we&rsquo;ll help.</p>
+
+  <div class="y-faq" id="youthFaq">
+    <details><summary>What is Movement Youth?</summary><p>Movement Youth is our weekly youth program for students in Grades 7&ndash;12. It&rsquo;s a place to build real friendships, have fun, ask honest questions, and grow in faith together. Everyone is welcome &mdash; whether you&rsquo;ve grown up in church or have never been before.</p></details>
+    <details><summary>When does Movement Youth meet?</summary><p>We meet every Wednesday from 6:30pm&ndash;8:30pm at Movement Church. Doors open at 6:30pm for check-in and hangout time.</p></details>
+    <details><summary>Where is Movement Youth located?</summary><p>Movement Church &mdash; <a href="https://maps.app.goo.gl/AcZpnVg95zzuzymj7" target="_blank" rel="noopener">65 Lansdowne Ave, Woodstock, ON N4T 1S8</a></p></details>
+    <details><summary>Is Movement Youth only for Christians?</summary><p>Not at all. Movement Youth is for everyone. You don&rsquo;t have to believe anything to come. You can show up, hang out, make friends, and explore faith at your own pace.</p></details>
+    <details><summary>What happens on a typical night?</summary><p>Every week is a little different, but most nights include:</p><ul><li>Games and activities</li><li>Hanging out with friends</li><li>A short message about real life and faith</li><li>Small group discussions / worship / more games depending on the night</li><li>Time to connect and have fun</li></ul><p>We keep things engaging, welcoming, and meaningful.</p></details>
+    <details><summary>Is there a cost to attend?</summary><p>Regular weekly youth nights are completely free. Some special events, retreats, or trips may have a cost, but we always communicate that clearly ahead of time.</p></details>
+    <details><summary>What should I bring?</summary><p>Just bring yourself &mdash; and maybe a friend &#128578; You don&rsquo;t need to bring anything special. Dress comfortably and come ready to have fun.</p></details>
+    <details><summary>What if it&rsquo;s my first time?</summary><p>We love first-time visitors. You can:</p><ul><li>Fill out a <a href="https://wearemovement.churchcenter.com/people/forms/1047399">Plan a Visit</a> form ahead of time, or</li><li>Just show up and we&rsquo;ll help you get checked in</li></ul><p>Our team will greet you, help you feel comfortable, and introduce you to others.</p></details>
+    <details><summary>How does check-in work?</summary><p>For safety, all students check in when they arrive. New students will be registered when they come in, and returning students check in quickly each week. Parents or guardians can also provide emergency contact info during registration.</p></details>
+    <details><summary>Is Movement Youth safe?</summary><p>Yes. Student safety is a top priority.</p><ul><li>All leaders are trained and screened</li><li>We follow clear supervision policies</li><li>Students are checked in and monitored throughout the night</li><li>Leaders are present in all areas</li></ul></details>
+    <details><summary>Can parents stay or observe?</summary><p>Absolutely. Parents are always welcome to visit, meet leaders, or see what a night looks like. We love connecting with families.</p></details>
+    <details><summary>How do I stay updated on events and announcements?</summary><p>When you attend or fill out a Plan a Visit, you&rsquo;ll automatically be added to:</p><ul><li>Email updates</li><li>Text message reminders</li></ul><p>This helps you stay informed about special events, schedule changes, and important announcements.</p></details>
+    <details><summary>Who leads Movement Youth?</summary><p>Movement Youth is led by Pastor Isaiah &amp; Eve Belleth alongside trained adult leader volunteers who care deeply about students and their growth. Our team is passionate about creating a safe, fun, and welcoming environment for everyone.</p></details>
+    <details><summary>How can I contact someone if I have questions?</summary><p>We&rsquo;d love to help.</p><ul><li>Email: <a href="mailto:isaiah@wearemovement.ca?subject=Curious%20about%20Movement%20Youth">isaiah@wearemovement.ca</a></li><li>Phone: <a href="tel:5195372211">519-537-2211</a></li></ul><p>Or fill out the <a href="https://wearemovement.churchcenter.com/people/forms/1047399">Plan a Visit</a> form and we&rsquo;ll reach out.</p></details>
+    <details><summary>Can I bring a friend?</summary><p>Yes &mdash; please do. Movement Youth is always better with friends. Everyone is welcome.</p></details>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     CLOSING
+     ========================================================== -->
+<section class="y-final">
+  <img class="y-final-bg" src="img/youth-hands.jpg" alt="" loading="lazy">
+  <div class="y-final-in shell reveal">
+    <h2>Movement Youth is always better <span class="y-hl">with friends.</span></h2>
+    <div class="y-cta">
+      <a class="y-btn y-btn--lime" href="https://wearemovement.churchcenter.com/people/forms/1047399">Plan a visit</a>
+      <a class="y-btn y-btn--ghost" href="https://www.instagram.com/movement_youth/" target="_blank" rel="noopener">@movement_youth</a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+<!-- ==========================================================
+     FOOTER - same as index.html
+     ========================================================== -->
+<footer class="shell">
+  <div class="foot-grid">
+    <div class="foot-id">
+      <img src="img/logo.png" alt="Movement Church">
+      <address>
+        65 Lansdowne Ave<br>Woodstock, ON<br><br>
+        <a href="tel:+15195372211">(519) 537-2211</a><br>
+        <a href="mailto:info@wearemovement.ca">info@wearemovement.ca</a>
+      </address>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <span class="kick">Visit</span>
+        <a href="visit.html">Plan a visit</a>
+        <a href="about.html">About us</a>
+        <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+        <a href="baptism.html">Baptism</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">Family</span>
+        <a href="kids.html">Kids</a>
+        <a href="club56.html">Club 56</a>
+        <a href="youth.html">Youth</a>
+        <a href="groups.html">Groups</a>
+        <a href="teams.html">Teams</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">More</span>
+        <a href="care.html">Care &amp; support</a>
+        <a href="give.html">Give</a>
+        <a href="job-opportunities.html">Job opportunities</a>
+        <a href="https://www.youtube.com/@MovementChurchCanada/streams">Watch online</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-bot">
+    <small>&copy; 2026 Movement Church &middot; Woodstock, Ontario &middot; <a href="privacy.html">Privacy Policy</a> &middot; <button type="button" class="foot-link" data-cookie-settings>Cookie settings</button></small>
+    <div class="socs">
+      <a href="https://www.instagram.com/movement_church/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1 0 18.7 12 6.7 6.7 0 0 0 12 5.3zm0 11A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.2a1.6 1.6 0 1 1-1.6-1.6 1.6 1.6 0 0 1 1.6 1.6z"/></svg></a>
+      <a href="https://www.facebook.com/MovementChurchWoodstock" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://www.youtube.com/@MovementChurchCanada" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5a2.5 2.5 0 0 0-1.8 1.8C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM9.7 15.1V8.9l6.1 3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/consent.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/intro.js"></script>
+<!-- about.js fades sections in as you scroll; give.js runs the Copy button; youth.js runs the video, countdown, tilt cards and FAQ search -->
+<script src="js/about.js"></script>
+<script src="js/give.js"></script>
+<script src="js/youth.js"></script>
+</body>
+</html>

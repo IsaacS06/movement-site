@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Give | Movement Church</title>
+<meta name="description" content="Give to Movement Church online, in person, by text, e-transfer, pre-authorized debit, bill payment or mail. See the impact of your generosity.">
+
+<!-- Social sharing preview -->
+<meta property="og:title" content="Give | Movement Church">
+<meta property="og:description" content="We give because God gave first.">
+<meta property="og:image" content="https://www.wearemovement.ca/img/give-candles-room.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Movement Church">
+<meta property="og:locale" content="en_CA">
+<meta property="og:url" content="https://www.wearemovement.ca/give.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="img/logo.png">
+<link rel="canonical" href="https://www.wearemovement.ca/give.html">
+<meta name="theme-color" content="#f6f7f5">
+<link rel="apple-touch-icon" href="img/logo.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap">
+
+<!-- Page intro: decide before anything paints whether the "M" animation plays,
+     and switch on the left-to-right fade for the big word on the home page.
+     The intro plays once per visit. For testing, set TEST to true to play it on every reload. -->
+<script>try{var TEST=false,d=document.documentElement,calm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!calm)d.classList.add("word-tick");if((TEST||!sessionStorage.getItem("mvIntro"))&&!calm){d.classList.add("has-intro","intro-wait");sessionStorage.setItem("mvIntro","1")}}catch(e){}</script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="css/style.css">
+<!-- Structured data for search engines -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://www.wearemovement.ca/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Give",
+   "item": "https://www.wearemovement.ca/give.html"
+  }
+ ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ==========================================================
+     PAGE INTRO - the "M" draws itself (see js/intro.js)
+     ========================================================== -->
+<div class="intro" id="intro" aria-hidden="true">
+  <div class="intro-bg"></div>
+  <div class="intro-mark">
+    <svg class="intro-svg" viewBox="0 0 400 380">
+      <!-- recolours the black logo; the colour is set in CSS (.intro-flood) -->
+      <filter id="introTint"><feFlood class="intro-flood"/><feComposite in2="SourceAlpha" operator="in"/></filter>
+      <image class="intro-logo" href="img/logo.png" width="400" height="380" filter="url(#introTint)"/>
+      <!-- a thick line in the background colour hides the logo, then pulls back along the M -->
+      <path class="intro-cover" pathLength="1" d="M46 372 L75 70 L200 268 L325 70 L353 372"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ==========================================================
+     NAV - same as index.html, with links pointing back to it
+     ========================================================== -->
+<nav class="nav">
+  <div class="nav-in">
+    <a class="nav-logo" href="index.html" aria-label="Movement Church home">
+      <img src="img/logo.png" alt=""><b>Movement Church</b>
+    </a>
+    <div class="nav-links" id="navMenu">
+      <a href="visit.html">Visit</a>
+      <div class="nav-group">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub1">Ministries<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub1">
+          <a href="kids.html">Movement Kids<small>Birth &ndash; Grade 4</small></a>
+          <a href="club56.html">Club 56<small>Grades 5 &amp; 6</small></a>
+          <a href="youth.html">Movement Youth<small>Grades 7&ndash;12</small></a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <button class="nav-group-btn" type="button" aria-expanded="false" aria-controls="navSub2">Get involved<svg viewBox="0 0 12 8" aria-hidden="true"><path d="M1 1.5l5 5 5-5"/></svg></button>
+        <div class="nav-sub" id="navSub2">
+          <a href="groups.html">Groups<small>Find your people</small></a>
+          <a href="teams.html">Teams<small>Serve on a team</small></a>
+          <a href="baptism.html">Baptism<small>Go public with your faith</small></a>
+          <a href="care.html">Care<small>Prayer and support</small></a>
+          <a href="job-opportunities.html">Job Opportunities<small>Work with us</small></a>
+        </div>
+      </div>
+      <a href="about.html">About</a>
+      <a href="give.html" aria-current="page">Give</a>
+      <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+    </div>
+    <a class="pill" href="https://wearemovement.churchcenter.com/people/forms/989717">Plan a Visit</a>
+    <!-- phones and tablets: opens the links above as a dropdown (js/nav.js) -->
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+<nav class="crumbs shell" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Give</li></ol></nav>
+
+
+
+<!-- ==========================================================
+     HERO
+     The "Give online" link (Tithe.ly) appears three times on
+     this page - search for give.tithe.ly to change them all.
+     ========================================================== -->
+<header class="give-hero shell">
+  <div class="give-hero-txt">
+    <span class="kick">Giving</span>
+    <h1>Generosity begins <span class="hot">with God</span></h1>
+    <p class="about-lede">Thank you for considering to walk in obedience to God&rsquo;s command to be a giver!</p>
+    <div class="hero-cta give-cta">
+      <a class="pill pill--hot" href="https://give.tithe.ly/?formId=d1e18c1e-6865-11ee-90fc-1260ab546d11" target="_blank" rel="noopener">Give online <span aria-hidden="true">&#8599;</span></a>
+      <a class="pill pill--ghost" href="#ways">Other ways to give <span aria-hidden="true">&#8595;</span></a>
+    </div>
+    <ul class="jump" aria-label="On this page">
+      <li><a href="#purpose">Purpose</a></li>
+      <li><a href="#ways">Ways</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+  <div class="give-hero-img">
+    <img src="img/give-candles-room.jpg" alt="A full room holding candles at a Movement Church Christmas service">
+    <a class="give-sticker" href="sms:2262401600">Text <b>GIVE</b> to<br>226-240-1600</a>
+  </div>
+</header>
+
+
+<!-- ==========================================================
+     PURPOSE - the verse over a photo, then why we give
+     ========================================================== -->
+<section class="band give-band" id="purpose">
+  <div class="band-bg"><img src="img/give-candles-close.jpg" alt=""></div>
+  <div class="band-in">
+    <q>We love each other because <em>he loved us first.</em></q>
+    <p class="band-cite">1 John 4:19</p>
+  </div>
+</section>
+
+<section class="sec shell">
+  <div class="purpose">
+    <div class="purpose-stat reveal">
+      <span class="kick">Purpose</span>
+      <p class="purpose-n">10%</p>
+      <p class="purpose-l">The tithe is our starting point</p>
+    </div>
+    <div class="purpose-txt reveal">
+      <p class="history-big">At Movement Church, we believe generosity begins with God.</p>
+      <p>We give because God first gave to us. The tithe is our starting point, returning the first 10 percent to God as an act of faith and worship. We also give offerings as an overflow of gratitude, honouring Him with what He has already provided.</p>
+      <p>At Movement, giving is not about money. It is about trust, worship, and aligning our hearts with His. We give because God gave first.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     WAYS TO GIVE - one card per way. Buttons marked
+     data-copy copy that text to the visitor's clipboard.
+     ========================================================== -->
+<section class="plan sec" id="ways">
+  <div class="shell">
+    <div class="sec-head reveal">
+      <span class="kick">Ways</span>
+      <h2>Ways to <span class="hot">give</span></h2>
+    </div>
+
+    <div class="ways">
+      <article class="way way--feature reveal">
+        <svg class="way-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <h3>Give Online</h3>
+        <p>Give quickly and securely online. Every gift makes a difference.</p>
+        <div class="way-act"><a class="pill" href="https://give.tithe.ly/?formId=d1e18c1e-6865-11ee-90fc-1260ab546d11" target="_blank" rel="noopener">Give online <span aria-hidden="true">&#8599;</span></a></div>
+      </article>
+
+      <article class="way reveal">
+        <svg class="way-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18M5 21V10l7-6 7 6v11"/><path d="M10 21v-5h4v5"/></svg>
+        <h3>Give in person</h3>
+        <p>You can give in person at any of our locations during an experience.</p>
+        <div class="way-act"><a class="way-link" href="visit.html">Visit us <span aria-hidden="true">&#8594;</span></a></div>
+      </article>
+
+      <article class="way reveal">
+        <svg class="way-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>
+        <h3>Text to Give</h3>
+        <p>Text, &lsquo;Give&rsquo; to 226-240-1600. Follow the few short prompts and you&rsquo;re all set.</p>
+        <div class="way-act">
+          <a class="way-link" href="sms:2262401600">Text (226) 240-1600 <span aria-hidden="true">&#8594;</span></a>
+          <button class="copy" type="button" data-copy="226-240-1600">Copy number</button>
+        </div>
+      </article>
+
+      <article class="way reveal">
+        <svg class="way-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h12M12 8l4 4-4 4"/><path d="M20 4v16"/></svg>
+        <h3>E-Transfer</h3>
+        <p>Email give@wearemovement.ca and note if your gift is for a specific ministry.</p>
+        <div class="way-act">
+          <a class="way-link" href="mailto:give@wearemovement.ca">give@wearemovement.ca <span aria-hidden="true">&#8594;</span></a>
+          <button class="copy" type="button" data-copy="give@wearemovement.ca">Copy email</button>
+        </div>
+      </article>
+
+      <article class="way reveal">
+        <svg class="way-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15.5l2 2 4-4"/></svg>
+        <h3>Pre-Authorized Debit</h3>
+        <p>Automatically give directly from your bank account on the 1st of each month.</p>
+        <!-- The Sign Up button on the old site had no link. This emails the giving team until there's a form. -->
+        <div class="way-act"><a class="way-link" href="mailto:give@wearemovement.ca?subject=Pre-Authorized%20Debit%20sign-up">Sign up <span aria-hidden="true">&#8594;</span></a></div>
+      </article>
+
+      <article class="way way--wide reveal">
+        <svg class="way-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6"/><path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/></svg>
+        <h3>Bank Bill Payee</h3>
+        <p>Movement Church is now set up as a vendor/payee at most major banks and credit unions, to donate through bill pay:</p>
+        <ol class="way-steps">
+          <li>email give@wearemovement.ca requesting to receive your unique account number</li>
+          <li>set up &ldquo;Movement Church&rdquo; as a payee in your banks online banking bill pay using the account number provided</li>
+          <li>set up one-time or recurring donations</li>
+        </ol>
+        <div class="way-act"><a class="way-link" href="mailto:give@wearemovement.ca?subject=I'd%20like%20a%20unique%20account%20number%20for%20Bank%20Bill%20Payee">Send an email <span aria-hidden="true">&#8594;</span></a></div>
+      </article>
+
+      <article class="way reveal">
+        <svg class="way-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        <h3>Mail a Gift</h3>
+        <address class="way-addr">Attn: Finance Movement Church<br>65 Lansdowne Ave, Woodstock, ON N4T 1S8</address>
+        <div class="way-act"><button class="copy" type="button" data-copy="Attn: Finance Movement Church, 65 Lansdowne Ave, Woodstock, ON N4T 1S8">Copy address</button></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     YOUR IMPACT - four stories, photo and words side by side
+     ========================================================== -->
+<section class="sec shell" id="impact">
+  <div class="sec-head reveal">
+    <span class="kick">Impact</span>
+    <h2>Your <span class="tealt">impact</span></h2>
+  </div>
+
+  <div class="impacts">
+    <article class="impact reveal">
+      <div class="impact-img"><img src="img/give-baptism.jpg" alt="A baptism at Movement Church" loading="lazy"></div>
+      <div class="impact-txt">
+        <span class="impact-n" aria-hidden="true">01</span>
+        <h3>Reaching the Lost</h3>
+        <p>When you give at Movement Church, you&rsquo;re giving to the vision of reaching those who don&rsquo;t yet know Christ. Every dollar helps create opportunities for people to encounter the hope, love, and truth of Jesus. Your generosity fuels ministry that leads the lost home.</p>
+      </div>
+    </article>
+
+    <article class="impact reveal">
+      <div class="impact-img"><img src="img/give-club56.jpg" alt="Two Club 56 students at Movement Church" loading="lazy"></div>
+      <div class="impact-txt">
+        <span class="impact-n" aria-hidden="true">02</span>
+        <h3>Equipping the Next Generation</h3>
+        <p>When you give at Movement Church, you&rsquo;re investing in the next generation. Your generosity directly impacts kids, middle schoolers, and youth through our <a href="kids.html">Movement Kids</a>, <a href="https://www.wearemovement.ca/middleschool">Movement Middle School</a>, and <a href="youth.html">Movement Youth</a> programs&mdash;helping them grow in faith, build lasting friendships, and discover their purpose in Christ.</p>
+      </div>
+    </article>
+
+    <article class="impact reveal">
+      <div class="impact-img"><img src="img/give-shoeboxes.jpg" alt="A stack of gift-filled shoeboxes ready to be sent" loading="lazy"></div>
+      <div class="impact-txt">
+        <span class="impact-n" aria-hidden="true">03</span>
+        <h3>Meeting the needs of people both locally &amp; globally.</h3>
+        <p class="impact-chip"><b>80+</b> people fed twice a week</p>
+        <p>When you give to Movement, you help meet real needs and change lives. Locally, your generosity feeds over 80 people twice a week through the soup kitchen, supports those who are unhoused, cares for those facing mental health challenges and disabilities, and invests in at-risk youth, your giving rescues women and children in Kampala, Uganda, provides food for kids in developing nations, and brings hope to families in war-torn Ukraine. Every gift makes a lasting difference by extending the love of Jesus near and far.</p>
+      </div>
+    </article>
+
+    <article class="impact reveal">
+      <div class="impact-img"><img src="img/give-preaching.jpg" alt="Preaching on a Sunday at Movement Church" loading="lazy"></div>
+      <div class="impact-txt">
+        <span class="impact-n" aria-hidden="true">04</span>
+        <h3>Spreading the Gospel through Church Planting.</h3>
+        <p class="impact-chip"><b>22</b> church plants across Canada</p>
+        <p>When you give to Movement, you are helping spread the gospel through church planting. We are a church that believes in multiplying the Kingdom and long to see a thriving church in every community, reaching people with the message of Jesus. So far, your generosity has helped us plant, resource, and train leaders for 22 church plants across Canada. Beyond our borders, we have also partnered in planting churches in Italy, Ukraine, and France. Every gift fuels the mission of seeing new communities come alive with the hope of Christ.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     ACCOUNTABILITY - financial statements download.
+     Each year: upload the new PDF and change the link below.
+     ========================================================== -->
+<section class="sec shell pt0">
+  <div class="final account reveal">
+    <div>
+      <span class="kick">Current Financial Statements</span>
+      <h2>Accountability &amp; Integrity</h2>
+      <p>We will always honour your gifts with faithful stewardship, ethical practices, and transparency so that Movement Church remains beyond reproach.</p>
+      <p>To ensure full transparency and accountability, our financial statements are reviewed through an independent third-party audit.</p>
+    </div>
+    <div class="final-btns">
+      <a class="pill" href="https://www.wearemovement.ca/s/2025-Movement-Church-Final-FS.pdf" target="_blank" rel="noopener">Download our financial statements <span aria-hidden="true">&#8595;</span></a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     FAQ - heading on the left, questions on the right
+     ========================================================== -->
+<section class="plan sec" id="faq">
+  <div class="shell beliefs">
+    <div class="sec-head beliefs-head">
+      <span class="kick">FAQ</span>
+      <h2>Questions about <span class="tealt">giving</span></h2>
+      <p class="sub">Got more questions? Email us <a class="inline-link" href="mailto:give@wearemovement.ca">give@wearemovement.ca</a></p>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>How can I give to Movement Church?</summary>
+        <p>You can give online through our secure giving platform, in person during a Sunday service, or by e-transfer to give@wearemovement.ca. You can also mail a check to: 65 Lansdowne Ave, Woodstock, ON N4T 1S8</p>
+      </details>
+      <details>
+        <summary>Can I designate my giving to a specific ministry or event?</summary>
+        <p>Yes! If you&rsquo;d like your gift to go toward a specific ministry (e.g., Kids, Middle School, Youth, Missions, Outreach), simply include a note in your e-transfer or select the appropriate fund when giving online.</p>
+      </details>
+      <details>
+        <summary>Is online giving safe and secure?</summary>
+        <p>Absolutely. We use a trusted and encrypted platform to ensure your financial information is protected and handled securely.</p>
+      </details>
+      <details>
+        <summary>Will I receive a tax receipt?</summary>
+        <p>Yes. All eligible donations receive an annual tax receipt early in the new year. Be sure we have your current contact information so we can send it to you.</p>
+      </details>
+      <details>
+        <summary>Can I set up recurring giving?</summary>
+        <p>Yes. Online giving allows you to set up automatic recurring donations&mdash;weekly, bi-weekly, or monthly&mdash;so you can give consistently and conveniently.</p>
+      </details>
+      <details>
+        <summary>What if I need to make changes to my giving?</summary>
+        <p>You can log into your giving account online at any time to update your payment method, adjust the amount, or cancel a recurring gift. If you have any issues you can email give@wearemovement.ca</p>
+      </details>
+      <details>
+        <summary>Can I give anonymously?</summary>
+        <p>Yes. Anonymous giving is available in person or by mail. For online giving, an account is required to process your donation and issue a tax receipt.</p>
+      </details>
+      <details>
+        <summary>Does Movement Church follow any financial accountability practices?</summary>
+        <p>Yes. We operate with transparency and integrity, with financial oversight from church leadership and external accounting support to ensure proper stewardship.</p>
+      </details>
+      <details>
+        <summary>Can I give in U.S. dollars or from outside Canada?</summary>
+        <p>Yes. Our online platform accepts international cards. However, tax receipts are issued under Canadian charitable law.</p>
+      </details>
+      <details>
+        <summary>What if I accidentally gave the wrong amount?</summary>
+        <p>No problem. Just contact us at give@wearemovement.ca, and we can help resolve any errors quickly.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==========================================================
+     CLOSING CALL TO ACTION
+     ========================================================== -->
+<section class="sec shell">
+  <div class="final">
+    <div>
+      <h2>We give because God gave first</h2>
+      <p>Give quickly and securely online. Every gift makes a difference.</p>
+    </div>
+    <div class="final-btns">
+      <a class="pill" href="https://give.tithe.ly/?formId=d1e18c1e-6865-11ee-90fc-1260ab546d11" target="_blank" rel="noopener">Give online</a>
+      <a class="pill pill--ghost" href="mailto:give@wearemovement.ca">Email us</a>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+
+<!-- ==========================================================
+     FOOTER - same as index.html
+     ========================================================== -->
+<footer class="shell">
+  <div class="foot-grid">
+    <div class="foot-id">
+      <img src="img/logo.png" alt="Movement Church">
+      <address>
+        65 Lansdowne Ave<br>Woodstock, ON<br><br>
+        <a href="tel:+15195372211">(519) 537-2211</a><br>
+        <a href="mailto:info@wearemovement.ca">info@wearemovement.ca</a>
+      </address>
+    </div>
+    <div class="foot-cols">
+      <div class="foot-col">
+        <span class="kick">Visit</span>
+        <a href="visit.html">Plan a visit</a>
+        <a href="about.html">About us</a>
+        <a href="https://wearemovement.churchcenter.com/registrations/events">Events</a>
+        <a href="baptism.html">Baptism</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">Family</span>
+        <a href="kids.html">Kids</a>
+        <a href="club56.html">Club 56</a>
+        <a href="youth.html">Youth</a>
+        <a href="groups.html">Groups</a>
+        <a href="teams.html">Teams</a>
+      </div>
+      <div class="foot-col">
+        <span class="kick">More</span>
+        <a href="care.html">Care &amp; support</a>
+        <a href="give.html">Give</a>
+        <a href="job-opportunities.html">Job opportunities</a>
+        <a href="https://www.youtube.com/@MovementChurchCanada/streams">Watch online</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot-bot">
+    <small>&copy; 2026 Movement Church &middot; Woodstock, Ontario &middot; <a href="privacy.html">Privacy Policy</a> &middot; <button type="button" class="foot-link" data-cookie-settings>Cookie settings</button></small>
+    <div class="socs">
+      <a href="https://www.instagram.com/movement_church/" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1A6.7 6.7 0 1 0 18.7 12 6.7 6.7 0 0 0 12 5.3zm0 11A4.3 4.3 0 1 1 16.3 12 4.3 4.3 0 0 1 12 16.3zm6.9-11.2a1.6 1.6 0 1 1-1.6-1.6 1.6 1.6 0 0 1 1.6 1.6z"/></svg></a>
+      <a href="https://www.facebook.com/MovementChurchWoodstock" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://www.youtube.com/@MovementChurchCanada" aria-label="YouTube"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5a2.5 2.5 0 0 0-1.8 1.8C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM9.7 15.1V8.9l6.1 3.1z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/consent.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/intro.js"></script>
+<!-- about.js fades sections in as you scroll; give.js runs the "Copy" buttons -->
+<script src="js/about.js"></script>
+<script src="js/give.js"></script>
+</body>
+</html>
