@@ -185,7 +185,7 @@ html.word-tick .word-layer{   /* on the layers, not .word, so the letters' extra
 .rail{overflow-x:auto;scrollbar-width:none;padding-block:10px 14px}
 .rail::-webkit-scrollbar{display:none}
 .rail-track{display:flex;gap:14px;width:max-content;padding-inline:var(--gut);will-change:transform}
-.rail.is-auto{overflow:hidden}
+.rail.is-auto{overflow:hidden;padding-block:16px 64px;margin-block:-6px -50px}   /* room for the card shadows to fade out instead of being cut off */
 .rail.is-auto .rail-track{padding-inline:0 14px}
 .rail-item{
   position:relative;flex:none;width:clamp(210px,26vw,330px);
