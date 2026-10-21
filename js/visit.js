@@ -1,7 +1,7 @@
 /* ============================================================
    MOVEMENT CHURCH - VISIT PAGE: INTERACTIVE BUILDING MAP
    ------------------------------------------------------------
-   The map is the floor plan (img/floor-plan.png) with clickable
+   The map is the floor plan (img/floor-plan.webp) with clickable
    room shapes drawn over it. Pick a room on the map or from the
    list, and it lights up, shows a card, and draws the walk to it
    from the front doors.
@@ -44,21 +44,21 @@
     {
       id: "entrance", name: "Main entrance", group: "welcome",
       text: "Front doors. There&rsquo;s a team in lanyards who will spot you and walk you in.",
-      photo: "img/place-doors.jpg",
+      photo: "img/place-doors.webp",
       shape: "M287,877 L545,877 L545,1153 L287,1153 Z", label: [416, 1015],
       route: [[400, 1015], [548, 975]]
     },
     {
       id: "lobby", name: "Lobby", group: "welcome",
       text: "Just inside the front doors. The auditorium doors are straight ahead.",
-      photo: "img/place-auditorium-doors.jpg",
+      photo: "img/place-auditorium-doors.webp",
       shape: "M548,898 L1003,898 L1003,968 L1168,968 L1168,1050 L1001,1050 L1001,1240 L1019,1240 L1019,1300 L961,1300 L961,1240 L903,1240 L903,1244 L822,1244 L822,1050 L548,1050 Z", label: [860, 975],
       route: FROM_DOORS
     },
     {
       id: "auditorium", name: "Auditorium", group: "worship",
       text: "Where Sunday services happen, at 9:00 and 11:00 AM. Sit wherever you want.",
-      photo: "img/place-auditorium.jpg",
+      photo: "img/place-auditorium.webp",
       shape: "M482,255 L592,250 Q861,385 1130,250 L1243,255 L1243,888 L482,888 Z", label: [861, 620],
       route: FROM_DOORS.concat([[860, 895], [860, 700]])
     },
@@ -84,14 +84,14 @@
     {
       id: "cafe", name: "Caf\u00e9", group: "welcome",
       text: "The coffee corner in the lobby. Grab a coffee before you find your seats.",
-      photo: "img/place-cafe.jpg",
+      photo: "img/place-cafe.webp",
       shape: "M1003,900 L1166,900 L1166,968 L1003,968 Z", label: [1085, 934],
       route: FROM_DOORS.concat([[1000, 950]])
     },
     {
       id: "welcome-desk", name: "Welcome desk", group: "welcome",
       text: "Guest Services. Our team is here to answer any questions you may have.",
-      photo: "img/place-guest-services.jpg",
+      photo: "img/place-guest-services.webp",
       shape: "M738,1052 L822,1052 L822,1208 L790,1208 L776,1180 L738,1116 Z", label: [784, 1120], small: true,
       route: FROM_DOORS.concat([[780, 1040]])
     },
@@ -237,7 +237,7 @@
   svg = el("svg", { "class": "map-svg", role: "img", "aria-label": "Floor plan of Movement Church" });
   rotGroup = el("g", {}, svg);
   var roomsGroup = el("g", { "class": "map-rooms" }, rotGroup);
-  var planImg = el("image", { href: "img/floor-plan.png", x: PLAN.x, y: PLAN.y, width: PLAN.w, height: PLAN.h, "class": "map-plan" }, rotGroup);
+  var planImg = el("image", { href: "img/floor-plan.webp", x: PLAN.x, y: PLAN.y, width: PLAN.w, height: PLAN.h, "class": "map-plan" }, rotGroup);
   planImg.addEventListener("error", function () {
     var msg = document.createElement("p");
     msg.className = "map-error";

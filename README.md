@@ -69,11 +69,11 @@ Change `--hot` once and every orange button on the site changes.
 
 ### Adding a photo to the rail
 
-1. Put the image in `img/` — say `img/easter.jpg`.
+1. Put the image in `img/` — say `img/easter.webp`.
 2. Open `js/content.js` and add a line inside `photos:`:
 
 ```js
-{ file: "img/easter.jpg", caption: "Easter morning" },
+{ file: "img/easter.webp", caption: "Easter morning" },
 ```
 
 Keep the comma. That's the whole job.
@@ -101,7 +101,16 @@ There's no database and nothing to configure.
 - The address reads **65 Lansdowne Ave** (from the Visit page). The MOVE Conf
   popup on the current site says 85.
 
-**Seeing an old version?** Every page links its CSS and JS with `?v=12`. After changing any of them, raise that number on all pages (search and replace `?v=12`) so browsers fetch the new files. To preview locally without caching, run `python3 serve.py` and open http://localhost:8000 (or use VS Code's Live Server).
+**Seeing an old version?** Every page links its CSS and JS with `?v=13`. After changing any of them, raise that number on all pages (search and replace `?v=13`) so browsers fetch the new files. To preview locally without caching, run `python3 serve.py` and open http://localhost:8000 (or use VS Code's Live Server).
+
+
+### Adding photos (keep the site fast)
+Photos are stored as **WebP** (much smaller than JPG). To add one:
+```
+cwebp -q 78 -resize 1600 0 my-photo.jpg -o img/my-photo.webp
+```
+(or export WebP from Lightroom/Photoshop at ~1600px wide, quality ~78) and reference `img/my-photo.webp`.
+Keep a JPG only if it's used as a page's social-share image (`og:image`).
 
 ## Search engines, analytics & legal
 
