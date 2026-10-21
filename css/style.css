@@ -12,7 +12,7 @@
   --paper3:#e1e4de;
   --ink:#12161a;
   --ink2:#535d63;
-  --ink3:#8a9298;
+  --ink3:#646d73;   /* darkened for WCAG AA contrast (4.9:1 on paper, 4.5:1 on paper2) */
   --line:#d7dbd5;
   --teal:#0d8b84;
   --teal-soft:#d3efec;
