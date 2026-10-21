@@ -101,7 +101,7 @@ There's no database and nothing to configure.
 - The address reads **65 Lansdowne Ave** (from the Visit page). The MOVE Conf
   popup on the current site says 85.
 
-**Seeing an old version after editing the CSS?** Every page links `css/style.css?v=9`. Raise that number on all pages after changing the stylesheet so browsers fetch the new one (or hard-refresh with Cmd+Shift+R).
+**Seeing an old version?** Every page links its CSS and JS with `?v=10`. After changing any of them, raise that number on all pages (search and replace `?v=10`) so browsers fetch the new files. To preview locally without caching, run `python3 serve.py` and open http://localhost:8000 (or use VS Code's Live Server).
 
 ## Search engines, analytics & legal
 

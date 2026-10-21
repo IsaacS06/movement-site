@@ -25,7 +25,7 @@
 <!-- Fonts (self-hosted copies of Bricolage Grotesque & Figtree; see fonts/) -->
 <link rel="preload" href="fonts/bricolage-grotesque-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/figtree-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="fonts/fonts.css?v=10">
 
 <!-- Page intro: decide before anything paints whether the "M" animation plays,
      and switch on the left-to-right fade for the big word on the home page.
@@ -33,8 +33,8 @@
 <script>try{var TEST=false,d=document.documentElement,calm=matchMedia("(prefers-reduced-motion: reduce)").matches;if(!calm)d.classList.add("word-tick");if((TEST||!sessionStorage.getItem("mvIntro"))&&!calm){d.classList.add("has-intro","intro-wait");sessionStorage.setItem("mvIntro","1")}}catch(e){}</script>
 
 <!-- Styles -->
-<!-- bump the ?v= number after changing style.css so browsers fetch the new version -->
-<link rel="stylesheet" href="css/style.css?v=9">
+<!-- bump every ?v= number (css and js, all pages) after changing them so browsers fetch the new versions -->
+<link rel="stylesheet" href="css/style.css?v=10">
 <!-- Structured data for search engines -->
 <script type="application/ld+json">
 {
@@ -308,12 +308,12 @@
 </footer>
 
 <!-- toast.js shows success/error messages for everything below -->
-<script src="js/toast.js"></script>
-<script src="js/consent.js"></script>
-<script src="js/nav.js"></script>
-<script src="js/intro.js"></script>
+<script src="js/toast.js?v=10"></script>
+<script src="js/consent.js?v=10"></script>
+<script src="js/nav.js?v=10"></script>
+<script src="js/intro.js?v=10"></script>
 <!-- smooth scrolling, fade-ins, parallax, progress bar (scroll.js uses the Lenis library) -->
-<script src="js/vendor/lenis.min.js"></script>
-<script src="js/scroll.js"></script>
+<script src="js/vendor/lenis.min.js?v=10"></script>
+<script src="js/scroll.js?v=10"></script>
 </body>
 </html>
