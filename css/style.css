@@ -1387,54 +1387,40 @@ html.lenis,html.lenis body{height:auto}
 
 /* ============================================================
    YOUTH PAGE - PALETTE B (youth-alt.html, for comparison only)
-   Danish Red #A91839 · Scarlet Orange #FF4F1F · Nyhavn Blue #9CC8EB
-   Butter Yellow #FFD96E · Cobalt Blue #004FBD · Tulip Pink #FFACC4
-   Copenhagen Cream #FAEFE5 · Cherry Red #75120B
+   Dark navy background, blue as the main colour.
+   Cobalt #004FBD · Nyhavn Blue #9CC8EB · Scarlet #FF4F1F · Butter #FFD96E
+   Tulip Pink #FFACC4 · Danish Red #A91839 · Cream #FAEFE5
    ============================================================ */
 .youth-page.youth-alt{
-  --y-bg:#FAEFE5;--y-bg2:#F3E1D2;--y-line:rgba(117,18,11,.16);
-  --y-purple:#004FBD;--y-lime:#FF4F1F;--y-pink:#FFACC4;--y-text:#75120B;--y-dim:rgba(117,18,11,.78);
-  --y-red:#A91839;--y-yellow:#FFD96E;--y-sky:#9CC8EB;
+  --y-bg:#0A1028;--y-bg2:#131C3F;--y-line:rgba(250,239,229,.12);
+  --y-text:#FAEFE5;--y-dim:rgba(250,239,229,.72);
+  --y-lime:#9CC8EB;            /* text accents: kicks, highlighted words */
+  --y-purple:#9CC8EB;--y-pink:#FFACC4;
+  --y-cobalt:#004FBD;--y-scarlet:#FF4F1F;--y-yellow:#FFD96E;
 }
-/* nav + footer on cream */
-.youth-page.youth-alt .nav{background:rgba(250,239,229,.9)}
-.youth-page.youth-alt .nav-logo img,.youth-page.youth-alt .foot-id img{filter:none}
-.youth-page.youth-alt .nav .pill{background:var(--y-lime);border-color:var(--y-lime);color:#fff}
-/* hero: wash the video toward cream so the cherry title reads */
-.youth-alt .y-hero-shade{background:radial-gradient(120% 80% at 80% 0%,rgba(255,79,31,.28),transparent 60%),linear-gradient(0deg,var(--y-bg) 4%,rgba(250,239,229,.72) 48%,rgba(250,239,229,.35))}
-.youth-alt .y-title-out{text-shadow:none}
-.youth-alt .y-count{background:rgba(250,239,229,.85)}
-.youth-alt .y-count.is-live{box-shadow:0 0 30px -6px rgba(255,79,31,.5)}
-.youth-alt .y-badge-mid{background:var(--y-red);box-shadow:0 0 30px rgba(169,24,57,.35)}
-/* buttons */
-.youth-alt .y-btn--lime{color:#fff}
-.youth-alt .y-btn--lime:hover{box-shadow:0 10px 30px -6px rgba(255,79,31,.5)}
-.youth-alt .y-btn--ghost{border-color:rgba(117,18,11,.35)}
-/* marquee: scarlet + cobalt */
-.youth-alt .y-marquee-row--back span{color:var(--y-purple)}
-.youth-alt .y-marquee span::after{color:var(--y-red)}
-/* ticket stub in butter yellow */
-.youth-alt .y-ticket-stub{background:var(--y-yellow);color:var(--y-text)}
-/* night cards: cobalt, scarlet, tulip */
-.youth-alt .y-night{background:radial-gradient(circle at var(--gx) var(--gy),color-mix(in srgb,var(--c) 22%,transparent),transparent 65%),#fff8f2}
-.youth-alt .y-night-tag{color:#fff}
-.youth-alt .y-night--pink .y-night-tag{color:var(--y-text)}
-.youth-alt .y-night--pink .y-night-n{color:var(--y-red)}
-/* photo wall + handle */
-.youth-alt .y-wall h2{text-shadow:0 2px 24px rgba(250,239,229,.9)}
-.youth-alt .y-handle{background:var(--y-yellow);color:var(--y-text)}
-.youth-alt .y-give{background:var(--y-sky)}
-.youth-alt .y-give .y-give-txt p{color:rgba(117,18,11,.85)}
-.youth-alt .y-give .copy.is-copied{background:var(--y-purple);color:#fff}
-/* faq */
-.youth-alt .y-faq summary::after{background:rgba(117,18,11,.08)}
-.youth-alt .y-faq details[open]{border-color:rgba(255,79,31,.55)}
-.youth-alt .y-faq details[open] summary::after{color:#fff}
-.youth-alt .y-search input{background:#fff8f2}
-.youth-alt .y-search input::placeholder{color:rgba(117,18,11,.55)}
-/* closing */
-.youth-alt .y-final::before{background:radial-gradient(80% 90% at 50% 100%,rgba(255,172,196,.55),transparent 70%),linear-gradient(180deg,var(--y-bg),rgba(250,239,229,.55) 40%,var(--y-bg))}
-.youth-page.youth-alt .scroll-progress{background:linear-gradient(90deg,var(--y-red),var(--y-lime))}
+/* blue fills with cream text */
+.youth-page.youth-alt .nav .pill,.youth-alt .y-btn--lime{background:var(--y-cobalt);border-color:var(--y-cobalt);color:var(--y-text)}
+.youth-alt .y-btn--lime:hover{box-shadow:0 10px 30px -6px rgba(0,79,189,.7)}
+.youth-alt .y-badge-mid{background:var(--y-cobalt);box-shadow:0 0 40px rgba(0,79,189,.65)}
+.youth-alt .y-handle{background:var(--y-cobalt);color:var(--y-text)}
+.youth-alt .y-give .copy.is-copied{background:var(--y-scarlet);color:#fff}
+/* hero glow and title */
+.youth-alt .y-hero-shade{background:radial-gradient(120% 80% at 80% 0%,rgba(0,79,189,.45),transparent 60%),linear-gradient(0deg,var(--y-bg) 2%,rgba(10,16,40,.55) 45%,rgba(10,16,40,.25))}
+.youth-alt .y-title-out{text-shadow:0 0 40px rgba(156,200,235,.35)}
+.youth-alt .y-count.is-live{border-color:var(--y-lime);box-shadow:0 0 30px -6px rgba(156,200,235,.6)}
+/* marquee: light blue + butter, scarlet stars */
+.youth-alt .y-marquee-row--back span{color:var(--y-yellow)}
+.youth-alt .y-marquee span::after{color:var(--y-scarlet)}
+/* Everyone is welcome: cobalt stub on the dark card */
+.youth-alt .y-ticket-stub{background:var(--y-cobalt);color:var(--y-text)}
+.youth-alt .y-ticket{border-color:rgba(156,200,235,.25)}
+/* night cards: blue, scarlet, tulip */
+.youth-alt .y-night--lime{--c:var(--y-scarlet)}
+.youth-alt .y-night-tag{color:var(--y-bg)}
+/* faq + closing */
+.youth-alt .y-faq details[open]{border-color:rgba(156,200,235,.5)}
+.youth-alt .y-final::before{background:radial-gradient(80% 90% at 50% 100%,rgba(0,79,189,.55),transparent 70%),linear-gradient(180deg,var(--y-bg),rgba(10,16,40,.4) 40%,var(--y-bg))}
+.youth-page.youth-alt .scroll-progress{background:linear-gradient(90deg,var(--y-cobalt),var(--y-lime))}
 /* comparison switcher */
-.palette-switch{position:fixed;left:16px;bottom:16px;z-index:200;background:var(--y-text);color:#fff;padding:10px 16px;border-radius:999px;font-size:13.5px;font-weight:600;box-shadow:0 10px 30px -10px rgba(0,0,0,.4)}
-.palette-switch:hover{background:var(--y-lime)}
+.palette-switch{position:fixed;left:16px;bottom:16px;z-index:200;background:var(--y-cobalt);color:var(--y-text);padding:10px 16px;border-radius:999px;font-size:13.5px;font-weight:600;box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+.palette-switch:hover{background:var(--y-scarlet)}
