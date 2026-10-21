@@ -64,55 +64,78 @@
      2. THE PHOTO RAIL
      ========================================================== */
   var rail = document.getElementById("rail");
-  var didDrag = false;    // true while dragging, so a drag doesn't open the viewer
 
+  /* The photos glide across on their own (no sideways scrolling to fight
+     with). They pause while hovered or keyboard-focused, while the photo
+     viewer is open, and when the strip is off screen. With "reduce motion"
+     on they stay still and can be swiped/scrolled instead. */
   if (rail) {
-    PHOTOS.forEach(function (photo, index) {
+    var track = document.createElement("div");
+    track.className = "rail-track";
+    rail.appendChild(track);
+
+    var makeCard = function (photo, index, copy) {
       var card = document.createElement("button");
       card.className = "rail-item";
       card.type = "button";
-      card.setAttribute("role", "listitem");
-      card.setAttribute("aria-label", "Enlarge photo: " + plainText(photo.caption));
-
       card.innerHTML =
         '<img src="' + attr(photo.file) + '" alt="' + attr(plainText(photo.alt || photo.caption)) + '" draggable="false" loading="lazy">' +
         '<span class="zoom" aria-hidden="true">+</span>' +
         '<figcaption>' + photo.caption + '</figcaption>';
+      if (copy) {
+        /* the second set is only there to make the loop seamless */
+        card.setAttribute("aria-hidden", "true");
+        card.tabIndex = -1;
+      } else {
+        card.setAttribute("role", "listitem");
+        card.setAttribute("aria-label", "Enlarge photo: " + plainText(photo.caption));
+      }
+      card.addEventListener("click", function () { openViewer(index); });
+      track.appendChild(card);
+    };
+    PHOTOS.forEach(function (p, i) { makeCard(p, i, false); });
 
-      card.addEventListener("click", function () {
-        if (!didDrag) openViewer(index);
+    if (!reduceMotion) {
+      PHOTOS.forEach(function (p, i) { makeCard(p, i, true); });
+      rail.classList.add("is-auto");
+
+      var x = 0, speed = 0, last = 0, hovering = false, visible = true;
+      var TOP_SPEED = 38;                                   // pixels per second
+      var loopWidth = function () { return track.scrollWidth / 2; };
+
+      rail.addEventListener("pointerenter", function (e) { if (e.pointerType === "mouse") hovering = true; });
+      rail.addEventListener("pointerleave", function () { hovering = false; });
+
+      /* keyboard: bring the focused photo into view */
+      rail.addEventListener("focusin", function (e) {
+        var card = e.target.closest(".rail-item");
+        if (!card) return;
+        var left = card.offsetLeft + x, right = left + card.offsetWidth;
+        if (left < 0 || right > rail.clientWidth) x = -(card.offsetLeft - (rail.clientWidth - card.offsetWidth) / 2);
+        track.style.transform = "translate3d(" + x + "px,0,0)";
       });
 
-      rail.appendChild(card);
-    });
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver(function (en) { visible = en[0].isIntersecting; }).observe(rail);
+      }
 
-    /* Drag with the mouse. Touch screens scroll on their own. */
-    var isDown = false;
-    var startX = 0;
-    var startScroll = 0;
-
-    rail.addEventListener("pointerdown", function (e) {
-      if (e.pointerType === "touch") return;
-      isDown = true;
-      didDrag = false;
-      startX = e.clientX;
-      startScroll = rail.scrollLeft;
-      rail.classList.add("is-dragging");
-    });
-
-    window.addEventListener("pointermove", function (e) {
-      if (!isDown) return;
-      var moved = e.clientX - startX;
-      if (Math.abs(moved) > 4) didDrag = true;   // 4px of slop, so a shaky click still counts as a click
-      rail.scrollLeft = startScroll - moved;
-    });
-
-    window.addEventListener("pointerup", function () {
-      if (!isDown) return;
-      isDown = false;
-      rail.classList.remove("is-dragging");
-      setTimeout(function () { didDrag = false; }, 0);
-    });
+      var tick = function (t) {
+        var dt = last ? Math.min((t - last) / 1000, 0.05) : 0;
+        last = t;
+        var paused = hovering || rail.contains(document.activeElement) ||
+                     (viewer && viewer.hasAttribute("open")) || !visible || document.hidden;
+        speed += ((paused ? 0 : TOP_SPEED) - speed) * Math.min(dt * 4, 1);   // ease to a stop and back
+        if (speed > 0.05) {
+          var w = loopWidth();
+          x -= speed * dt;
+          if (w && -x >= w) x += w;
+          if (x > 0) x -= w;
+          track.style.transform = "translate3d(" + x.toFixed(2) + "px,0,0)";
+        }
+        requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    }
   }
 
 

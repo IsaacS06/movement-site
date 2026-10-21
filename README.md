@@ -101,7 +101,7 @@ There's no database and nothing to configure.
 - The address reads **65 Lansdowne Ave** (from the Visit page). The MOVE Conf
   popup on the current site says 85.
 
-**Seeing an old version after editing the CSS?** Every page links `css/style.css?v=7`. Raise that number on all pages after changing the stylesheet so browsers fetch the new one (or hard-refresh with Cmd+Shift+R).
+**Seeing an old version after editing the CSS?** Every page links `css/style.css?v=8`. Raise that number on all pages after changing the stylesheet so browsers fetch the new one (or hard-refresh with Cmd+Shift+R).
 
 ## Search engines, analytics & legal
 

@@ -180,17 +180,15 @@ html.word-tick .word-layer{   /* on the layers, not .word, so the letters' extra
 .rail-wrap{padding-block:clamp(10px,2vw,20px) clamp(38px,6vw,76px)}
 .rail-head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;justify-content:space-between;margin-bottom:16px}
 .rail-hint{font-size:13.5px;color:var(--ink3);font-weight:600;display:flex;align-items:center;gap:8px}
-.rail{
-  display:flex;gap:14px;overflow-x:auto;overscroll-behavior-x:contain;
-  scroll-snap-type:x mandatory;padding-block:6px;
-  padding-inline:var(--gut);
-  scrollbar-width:none;cursor:grab;
-}
+/* the strip glides on its own (js/site.js); with reduce motion it's a plain swipeable row */
+.rail{overflow-x:auto;scrollbar-width:none;padding-block:10px 14px}
 .rail::-webkit-scrollbar{display:none}
-.rail.is-dragging{cursor:grabbing;scroll-snap-type:none}
+.rail-track{display:flex;gap:14px;width:max-content;padding-inline:var(--gut);will-change:transform}
+.rail.is-auto{overflow:hidden}
+.rail.is-auto .rail-track{padding-inline:0 14px}
 .rail-item{
   position:relative;flex:none;width:clamp(210px,26vw,330px);
-  scroll-snap-align:center;border:none;padding:0;border-radius:18px;
+  border:none;padding:0;border-radius:18px;
   overflow:hidden;background:var(--paper3);
   box-shadow:var(--shadow);
   transition:transform .3s cubic-bezier(.2,.8,.3,1);
