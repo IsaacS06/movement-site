@@ -17,7 +17,7 @@ movement-site/
 ├─ js/
 │  ├─ content.js       ← the photos, captions, ministries and planner
 │  └─ site.js          the behaviour (you rarely need to touch this)
-└─ img/                site photos, plus staff/ for team headshots
+└─ img/                85 images (staff headshots in img/staff/)
 ```
 
 ## Looking at it
