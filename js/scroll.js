@@ -146,15 +146,20 @@
   /* ---------- 2c. MARQUEES SPEED UP WITH YOUR SCROLL ---------- */
   var marquees = Array.prototype.slice.call(document.querySelectorAll(".ticker-track, .y-marquee-track, .y-badge svg"));
   var boost = 0, prevY = window.scrollY;
+  var applied = 0, anims = [];
   if (marquees.length && document.body.getAnimations) {
+    marquees.forEach(function (el) { anims = anims.concat(el.getAnimations()); });
     var spin = function () {
       var y = window.scrollY;
       var v = lenis ? Math.abs(lenis.velocity || 0) : Math.abs(y - prevY);
       prevY = y;
       boost += (Math.min(v * 0.35, 5) - boost) * 0.08;        // ease toward the target speed
-      marquees.forEach(function (el) {
-        el.getAnimations().forEach(function (anim) { anim.playbackRate = 1 + boost; });   // paused (hover/focus) stays paused
-      });
+      /* only touch the animations when the speed has really changed:
+         setting playbackRate every frame makes Safari stutter */
+      if (Math.abs(boost - applied) > 0.04 || (boost < 0.01 && applied !== 0)) {
+        applied = boost < 0.01 ? 0 : boost;
+        anims.forEach(function (anim) { anim.playbackRate = 1 + applied; });
+      }
       requestAnimationFrame(spin);
     };
     requestAnimationFrame(spin);
