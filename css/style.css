@@ -1247,6 +1247,12 @@ main{display:block;position:relative}
 .legal-date{margin-top:14px;font-size:14px;color:var(--ink3);font-weight:600}
 .legal-contact{font-style:normal;color:var(--ink2);line-height:1.8;font-size:16.5px}
 .legal-contact a{color:var(--teal);font-weight:700}
+.legal-table-wrap{overflow-x:auto;margin:12px 0 4px;border:1px solid var(--line);border-radius:14px}
+.legal-table{width:100%;border-collapse:collapse;font-size:14.5px;color:var(--ink2)}
+.legal-table th,.legal-table td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+.legal-table th{color:var(--ink);font-weight:700;background:var(--paper2)}
+.legal-table tr:last-child td{border-bottom:none}
+.legal-table code{font-size:13px;color:var(--ink)}
 @media (max-width:820px){.legal{grid-template-columns:1fr}.legal-toc{position:static;flex-direction:row;flex-wrap:wrap;gap:4px 16px}.legal-toc .kick{width:100%}}
 
 .nf{padding-block:clamp(40px,7vw,100px) clamp(30px,4vw,56px)}

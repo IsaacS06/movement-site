@@ -65,7 +65,7 @@
       'No ads, and nothing loads unless you say yes. <a href="privacy.html#cookies">Privacy policy</a></p>' +
       '<div class="consent-btns">' +
         '<button type="button" class="pill" data-choice="granted">Accept</button>' +
-        '<button type="button" class="pill pill--ghost" data-choice="denied">Decline</button>' +
+        '<button type="button" class="pill" data-choice="denied">Decline</button>' +   // same style as Accept: equal prominence
       "</div>";
     banner.addEventListener("click", function (e) {
       var btn = e.target.closest("[data-choice]");
