@@ -117,8 +117,8 @@ var CONTENT = {
      ---------------------------------------------------------- */
   ministries: [
     {
-      photo: "img/watoto-choir-2.jpg",
-      alt:   "A child from the visiting Watoto Children&rsquo;s Choir worshipping on stage at Movement Church",
+      photo: "img/movement-kids-checkin.jpg",
+      alt:   "A Movement Kids volunteer welcoming a family at the kids check-in desk",
       age:   "Newborn &ndash; Grade 4",
       name:  "Movement Kids",
       text:  "Safe, loud and genuinely fun. Secure check-in at both services, with a team your kids will talk about all week.",
