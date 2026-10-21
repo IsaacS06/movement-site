@@ -75,7 +75,7 @@
       card.setAttribute("aria-label", "Enlarge photo: " + plainText(photo.caption));
 
       card.innerHTML =
-        '<img src="' + attr(photo.file) + '" alt="' + attr(plainText(photo.caption)) + '" draggable="false" loading="lazy">' +
+        '<img src="' + attr(photo.file) + '" alt="' + attr(plainText(photo.alt || photo.caption)) + '" draggable="false" loading="lazy">' +
         '<span class="zoom" aria-hidden="true">+</span>' +
         '<figcaption>' + photo.caption + '</figcaption>';
 
@@ -133,7 +133,7 @@
     var photo = PHOTOS[viewerIndex];
     if (!photo) return;
     viewerImg.src = photo.file;
-    viewerImg.alt = plainText(photo.caption);
+    viewerImg.alt = plainText(photo.alt || photo.caption);
     viewerCap.innerHTML = photo.caption;
   }
 
@@ -282,7 +282,7 @@
 
       tile.innerHTML =
         '<span class="tile-plus" aria-hidden="true">+</span>' +
-        '<span class="tile-img"><img src="' + attr(item.photo) + '" alt="' + attr(plainText(item.name)) + ' at Movement Church" loading="lazy"></span>' +
+        '<span class="tile-img"><img src="' + attr(item.photo) + '" alt="' + attr(item.alt ? plainText(item.alt) : plainText(item.name) + " at Movement Church") + '" loading="lazy"></span>' +
         '<span class="tile-cap">' +
           '<span class="tile-age">' + item.age + '</span>' +
           '<h3>' + item.name + '</h3>' +

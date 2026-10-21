@@ -41,7 +41,7 @@ var CONTENT = {
     { file: "img/handlight.jpg",    caption: "A hand raised during worship" },
     { file: "img/congregation.jpg", caption: "A full room on a Sunday" },
     { file: "img/prayer2.jpg",      caption: "Praying for each other at the front" },
-    { file: "img/kids.jpg",         caption: "The Watoto Children&rsquo;s Choir, visiting on a Sunday" },
+    { file: "img/watoto-choir-1.jpg", caption: "The Watoto Children&rsquo;s Choir, visiting on a Sunday", alt: "The visiting Watoto Children&rsquo;s Choir performing on stage at Movement Church" },
     { file: "img/candle.jpg",       caption: "Candles up at Christmas" }
         
   ],
@@ -117,7 +117,8 @@ var CONTENT = {
      ---------------------------------------------------------- */
   ministries: [
     {
-      photo: "img/kids2.jpg",
+      photo: "img/watoto-choir-2.jpg",
+      alt:   "A child from the visiting Watoto Children&rsquo;s Choir worshipping on stage at Movement Church",
       age:   "Newborn &ndash; Grade 4",
       name:  "Movement Kids",
       text:  "Safe, loud and genuinely fun. Secure check-in at both services, with a team your kids will talk about all week.",
