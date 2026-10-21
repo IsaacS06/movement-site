@@ -144,6 +144,7 @@ p{margin:0}
   font-size:clamp(54px,17.2vw,250px);
   line-height:.78;letter-spacing:-.045em;text-transform:uppercase;
   background-size:cover;background-position:center 45%;
+  background-color:var(--ink);   /* if a photo ever fails to load, the word still shows in solid ink */
   -webkit-background-clip:text;background-clip:text;
   color:transparent;-webkit-text-fill-color:transparent;
   transition:opacity 1.1s ease;
