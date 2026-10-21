@@ -339,3 +339,39 @@ Measured with the WCAG relative-luminance formula against the actual CSS values 
 **Not changed without your decision:** any image, claim, or video (items 14, 15, 17), and the 8 unused images.
 
 **Commits (one per group):** contrast · headings & labels · keyboard & motion controls · consent & map gating · policy pages & footer links · giving details & content fixes.
+
+---
+
+# Phase 2 — status after fixes (October 20, 2026)
+
+Constraint applied: **nothing changes visually** except the approved text changes. Every page was screenshotted at 1440px and 390px before and after each group of changes and compared pixel by pixel. **Restore point:** git tag `pre-compliance-audit` (commit `c195b7d`).
+
+| # | Item | Was | Now | What changed |
+|---|------|-----|-----|--------------|
+| 1 | Colour contrast | ❌ | ⚠️ accepted risk | `--ink3` → `#646d73` (4.9:1 / 4.5:1). **Teal small text (3.9:1), orange headline words (2.9:1), white on orange buttons (3.1:1) and white on teal (4.2:1) are accepted risk to preserve brand colours** — the organisation is likely under the AODA 50-employee threshold. Youth search placeholder and light UI borders also left as-is (visual change). |
+| 2 | Alt text | ✅ | ✅ | Watoto photos now identify the visiting Watoto Children's Choir. |
+| 3 | General accessibility | ⚠️ | ⚠️ | Hidden `<h2>`s fix heading order (404, care, club56, groups); `lang="en-CA"`; caption tracks added (captions text still TODO); marquees and youth hero video pause on hover/focus. |
+| 4 | Button & link labels | ⚠️ | ✅ | aria-labels on "Learn more" (youth) and each "See it on the map" (kids). |
+| 5 | Keyboard & widgets | ⚠️ | ✅ (on-site) | Focus trap in the photo viewer; youth FAQ no-results is a `role="status"`. External forms still to check. |
+| 6 | Privacy policy | ⚠️ | ⚠️ placeholders | Retention, accuracy, breach, prayer visibility, email/SMS provider, privacy officer, legal name + CRA number added — **fill the [PLACEHOLDERS]**. |
+| 7 | Terms of use | ❌ | ⚠️ placeholders | `terms.html` created, linked from the privacy policy (not the footer, by request). |
+| 8 | Cookies policy | ⚠️ | ✅ | Cookie list table in `privacy.html` (`_ga`, `mvConsent`, `mvIntro`, Google Maps cookies, self-hosted fonts note). |
+| 9 | Cookie consent | ⚠️ | ⚠️ | Accept/Decline now equal prominence. **Google Map still loads before consent — left as-is by decision and disclosed in the cookie list.** |
+| 10 | Tracking | ✅ | ✅ | — |
+| 11 | Third-party embeds | ⚠️ | ⚠️ | Google Fonts now self-hosted (no request to Google; pixel-identical). Google Map unchanged (see 9). |
+| 12 | Form consent / CASL | ⚠️ | ⚠️ | Youth wording is now opt-in with unsubscribe. Church Center forms still to check. |
+| 13 | Data minimisation | ⚠️ | ⚠️ external | Church Center forms still to review. |
+| 14 | Image copyright & children | ⚠️ | ⚠️ | **Watoto: resolved — permission obtained from Watoto for livestream and social media use.** Photos renamed `watoto-choir-1/2.jpg`. 8 unused images deleted. Other photos of identifiable children/teens still need consent confirmed. |
+| 15 | Song lyrics & music | ⚠️ | ⚠️ | Unchanged — confirm CCLI Streaming Licence. |
+| 16 | Testimonials | ✅ | ✅ | — |
+| 17 | Unsupported claims | ⚠️ | ⚠️ | Unchanged by request — confirm figures are current. |
+| 18 | Organisation details | ❌ | ⚠️ placeholders | CRA registration no. 89813 7559 RR0001 + CRA verification link + receipting policy on Give; also on privacy and terms. Legal name still a placeholder. |
+| 19 | Local laws | ⚠️ | ⚠️ | "EST" → "Eastern Time"; see items 1, 6, 12, 18. |
+| 20 | Leftover content | ⚠️ | ✅ | Middle School link → `club56.html`; README image count fixed; unused images removed. GA ID placeholder remains until you add it. |
+
+### Not done — visual change required
+- Teal small text, orange headline words, white-on-orange and white-on-teal buttons (contrast) — accepted risk.
+- Youth search placeholder contrast (3.5:1).
+- UI component borders (option buttons, place buttons, FAQ circles) under 3:1.
+- Visible pause buttons for marquees / youth video (hover/focus pause added instead).
+- Consent-gating the Google Map (would replace the map with a click-to-load placeholder).
