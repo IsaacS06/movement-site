@@ -167,6 +167,7 @@ html.word-tick .word-layer{   /* on the layers, not .word, so the letters' extra
   .word-layer{color:var(--ink);-webkit-text-fill-color:var(--ink);background:none}
   .word-layer + .word-layer{display:none}
 }
+.hero-tagline{font-family:var(--disp);font-weight:800;text-transform:uppercase;letter-spacing:.01em;font-size:clamp(15px,2.3vw,32px);line-height:1.1;color:var(--ink);margin-top:clamp(14px,1.8vw,22px)}
 .hero-sub{max-width:52ch;margin-inline:auto;color:var(--ink2);font-size:clamp(16px,1.7vw,19.5px);line-height:1.55;margin-top:clamp(16px,2.4vw,26px)}
 .hero-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:22px}
 .hero-when{
