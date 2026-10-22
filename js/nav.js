@@ -60,6 +60,41 @@
     if (e.key === "Escape") closeGroups(null);
   });
 
+  /* phones: swipe up on the nav bar to tuck it away. It comes back when
+     you scroll up (js/scroll.js) or swipe down on the top edge. */
+  var touchY = null;
+  nav.addEventListener("touchstart", function (e) {
+    touchY = e.touches.length === 1 ? e.touches[0].clientY : null;
+  }, { passive: true });
+  nav.addEventListener("touchend", function (e) {
+    if (touchY === null) return;
+    var dy = e.changedTouches[0].clientY - touchY;
+    touchY = null;
+    if (dy < -25 && !nav.classList.contains("is-open")) {
+      nav.classList.add("nav--hidden");
+      nav.dataset.swipedAway = "1";
+    }
+  }, { passive: true });
+  /* swipe down from the very top of the screen to bring it back */
+  var edgeY = null;
+  document.addEventListener("touchstart", function (e) {
+    edgeY = (nav.classList.contains("nav--hidden") && e.touches[0].clientY < 40) ? e.touches[0].clientY : null;
+  }, { passive: true });
+  document.addEventListener("touchend", function (e) {
+    if (edgeY === null) return;
+    if (e.changedTouches[0].clientY - edgeY > 25) { nav.classList.remove("nav--hidden"); delete nav.dataset.swipedAway; }
+    edgeY = null;
+  }, { passive: true });
+
+  /* scrolling up always brings a swiped-away nav back (also when the
+     scroll effects in js/scroll.js are off for reduced motion) */
+  var prevY = window.scrollY;
+  window.addEventListener("scroll", function () {
+    var y = window.scrollY;
+    if (nav.dataset.swipedAway && y < prevY - 4) { nav.classList.remove("nav--hidden"); delete nav.dataset.swipedAway; }
+    prevY = y;
+  }, { passive: true });
+
   /* back on a wide screen the links show normally, so reset */
   window.matchMedia("(min-width: 1081px)").addEventListener("change", function (mq) {
     if (mq.matches) setOpen(false);
