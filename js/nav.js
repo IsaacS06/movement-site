@@ -60,49 +60,54 @@
     if (e.key === "Escape") closeGroups(null);
   });
 
-  /* phones: swipe up on the nav bar to tuck it away. Reacts while the
-     finger is still moving (browsers often cancel the touch once the
-     page starts scrolling, so we can't wait for the finger to lift).
-     It comes back when you scroll up or swipe down from the top edge. */
-  var touchY = null, swipedAt = 0;
-  function hideNav() {
-    if (nav.classList.contains("is-open")) return;
+  /* ---- the nav tucks away ----
+     - scrolling down past the nav's height hides it; scrolling up shows it
+     - on phones, a finger swiping up that starts on the nav bar hides it
+       straight away (checked while the finger moves, since browsers often
+       cancel the touch once the page scrolls)
+     - a wheel/trackpad scroll down over the bar hides it too
+     - swipe down from the top edge, or scroll up, to bring it back
+     Lives here (not in scroll.js) so it also works with "reduce motion". */
+  var lastY = window.scrollY, lockUntil = 0, startY = null;
+  function menuOpen() { return nav.classList.contains("is-open") || !!nav.querySelector(".nav-group.is-open"); }
+  function hideNav(lock) {
+    if (menuOpen()) return;
     nav.classList.add("nav--hidden");
-    nav.dataset.swipedAway = "1";
-    swipedAt = Date.now();
+    if (lock) lockUntil = Date.now() + 900;      // ignore the little bounce after a swipe
   }
-  function showNav() {
-    nav.classList.remove("nav--hidden");
-    delete nav.dataset.swipedAway;
-  }
-  window.mvNavRecentlySwiped = function () { return Date.now() - swipedAt < 900; };
-  nav.addEventListener("touchstart", function (e) {
-    touchY = e.touches.length === 1 ? e.touches[0].clientY : null;
-  }, { passive: true });
-  nav.addEventListener("touchmove", function (e) {
-    if (touchY === null) return;
-    if (touchY - e.touches[0].clientY > 20) { hideNav(); touchY = null; }
-  }, { passive: true });
-  nav.addEventListener("touchend", function () { touchY = null; }, { passive: true });
-  nav.addEventListener("touchcancel", function () { touchY = null; }, { passive: true });
+  function showNav() { nav.classList.remove("nav--hidden"); }
+  window.mvHideNav = hideNav;
 
-  /* swipe down from the very top of the screen to bring it back */
+  window.addEventListener("scroll", function () {
+    var y = window.scrollY, dy = y - lastY;
+    if (Math.abs(dy) > 3) {
+      if (dy > 0 && y > nav.offsetHeight + 4) hideNav(false);
+      else if (dy < 0 && Date.now() > lockUntil) showNav();
+      lastY = y;
+    }
+    nav.classList.toggle("nav--scrolled", y > 10);
+  }, { passive: true });
+
+  function overNav(t) {
+    var r = nav.getBoundingClientRect();
+    return !nav.classList.contains("nav--hidden") && t.clientY >= r.top - 4 && t.clientY <= r.bottom + 8;
+  }
   var edgeY = null;
   document.addEventListener("touchstart", function (e) {
-    edgeY = (nav.classList.contains("nav--hidden") && e.touches[0].clientY < 48) ? e.touches[0].clientY : null;
+    var t = e.touches[0];
+    startY = (e.touches.length === 1 && overNav(t)) ? t.clientY : null;
+    edgeY = (nav.classList.contains("nav--hidden") && t.clientY < 48) ? t.clientY : null;
   }, { passive: true });
   document.addEventListener("touchmove", function (e) {
-    if (edgeY !== null && e.touches[0].clientY - edgeY > 25) { showNav(); edgeY = null; }
+    var y = e.touches[0].clientY;
+    if (startY !== null && startY - y > 16) { hideNav(true); startY = null; }
+    if (edgeY !== null && y - edgeY > 25) { showNav(); edgeY = null; }
   }, { passive: true });
+  document.addEventListener("touchend", function () { startY = edgeY = null; }, { passive: true });
+  document.addEventListener("touchcancel", function () { startY = edgeY = null; }, { passive: true });
 
-  /* scrolling up brings a swiped-away nav back - but not the little
-     bounce right after the swipe */
-  var prevY = window.scrollY;
-  window.addEventListener("scroll", function () {
-    var y = window.scrollY;
-    if (nav.dataset.swipedAway && y < prevY - 4 && !window.mvNavRecentlySwiped()) showNav();
-    prevY = y;
-  }, { passive: true });
+  nav.addEventListener("wheel", function (e) { if (e.deltaY > 4) hideNav(true); }, { passive: true });
+  nav.addEventListener("focusin", showNav);   // keyboard users always get the nav back
 
   /* back on a wide screen the links show normally, so reset */
   window.matchMedia("(min-width: 1081px)").addEventListener("change", function (mq) {

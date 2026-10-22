@@ -209,26 +209,12 @@
       el.style.translate = "0 " + offset.toFixed(1) + "px";
     });
 
-    if (nav) {
-      var menuOpen = nav.classList.contains("is-open") || nav.querySelector(".nav-group.is-open");
-      if (y > 240 && y > lastY + 4 && !menuOpen) nav.classList.add("nav--hidden");
-      else if (nav.dataset.swipedAway) {
-        /* swiped away by hand (js/nav.js): only scrolling up brings it back,
-           ignoring the bounce right after the swipe */
-        if (y < lastY - 4 && !(window.mvNavRecentlySwiped && window.mvNavRecentlySwiped())) {
-          nav.classList.remove("nav--hidden"); delete nav.dataset.swipedAway;
-        }
-      }
-      else if (y < lastY - 4 || y <= 240) nav.classList.remove("nav--hidden");
-      nav.classList.toggle("nav--scrolled", y > 10);
-    }
+    /* (the nav hiding on scroll lives in js/nav.js) */
     lastY = y;
   }
   function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(update); } }
   if (lenis) lenis.on("scroll", onScroll);
   window.addEventListener("scroll", onScroll, { passive: true });
   window.addEventListener("resize", onScroll);
-  /* keyboard users: always show the nav when something in it gets focus */
-  if (nav) nav.addEventListener("focusin", function () { nav.classList.remove("nav--hidden"); });
   update();
 })();
