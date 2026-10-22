@@ -60,38 +60,47 @@
     if (e.key === "Escape") closeGroups(null);
   });
 
-  /* phones: swipe up on the nav bar to tuck it away. It comes back when
-     you scroll up (js/scroll.js) or swipe down on the top edge. */
-  var touchY = null;
+  /* phones: swipe up on the nav bar to tuck it away. Reacts while the
+     finger is still moving (browsers often cancel the touch once the
+     page starts scrolling, so we can't wait for the finger to lift).
+     It comes back when you scroll up or swipe down from the top edge. */
+  var touchY = null, swipedAt = 0;
+  function hideNav() {
+    if (nav.classList.contains("is-open")) return;
+    nav.classList.add("nav--hidden");
+    nav.dataset.swipedAway = "1";
+    swipedAt = Date.now();
+  }
+  function showNav() {
+    nav.classList.remove("nav--hidden");
+    delete nav.dataset.swipedAway;
+  }
+  window.mvNavRecentlySwiped = function () { return Date.now() - swipedAt < 900; };
   nav.addEventListener("touchstart", function (e) {
     touchY = e.touches.length === 1 ? e.touches[0].clientY : null;
   }, { passive: true });
-  nav.addEventListener("touchend", function (e) {
+  nav.addEventListener("touchmove", function (e) {
     if (touchY === null) return;
-    var dy = e.changedTouches[0].clientY - touchY;
-    touchY = null;
-    if (dy < -25 && !nav.classList.contains("is-open")) {
-      nav.classList.add("nav--hidden");
-      nav.dataset.swipedAway = "1";
-    }
+    if (touchY - e.touches[0].clientY > 20) { hideNav(); touchY = null; }
   }, { passive: true });
+  nav.addEventListener("touchend", function () { touchY = null; }, { passive: true });
+  nav.addEventListener("touchcancel", function () { touchY = null; }, { passive: true });
+
   /* swipe down from the very top of the screen to bring it back */
   var edgeY = null;
   document.addEventListener("touchstart", function (e) {
-    edgeY = (nav.classList.contains("nav--hidden") && e.touches[0].clientY < 40) ? e.touches[0].clientY : null;
+    edgeY = (nav.classList.contains("nav--hidden") && e.touches[0].clientY < 48) ? e.touches[0].clientY : null;
   }, { passive: true });
-  document.addEventListener("touchend", function (e) {
-    if (edgeY === null) return;
-    if (e.changedTouches[0].clientY - edgeY > 25) { nav.classList.remove("nav--hidden"); delete nav.dataset.swipedAway; }
-    edgeY = null;
+  document.addEventListener("touchmove", function (e) {
+    if (edgeY !== null && e.touches[0].clientY - edgeY > 25) { showNav(); edgeY = null; }
   }, { passive: true });
 
-  /* scrolling up always brings a swiped-away nav back (also when the
-     scroll effects in js/scroll.js are off for reduced motion) */
+  /* scrolling up brings a swiped-away nav back - but not the little
+     bounce right after the swipe */
   var prevY = window.scrollY;
   window.addEventListener("scroll", function () {
     var y = window.scrollY;
-    if (nav.dataset.swipedAway && y < prevY - 4) { nav.classList.remove("nav--hidden"); delete nav.dataset.swipedAway; }
+    if (nav.dataset.swipedAway && y < prevY - 4 && !window.mvNavRecentlySwiped()) showNav();
     prevY = y;
   }, { passive: true });
 

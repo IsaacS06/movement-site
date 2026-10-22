@@ -212,10 +212,14 @@
     if (nav) {
       var menuOpen = nav.classList.contains("is-open") || nav.querySelector(".nav-group.is-open");
       if (y > 240 && y > lastY + 4 && !menuOpen) nav.classList.add("nav--hidden");
-      else if (y < lastY - 4 || (y <= 240 && !nav.dataset.swipedAway)) {   // swiped-away nav stays hidden until you scroll up
-        nav.classList.remove("nav--hidden");
-        if (y < lastY - 4) delete nav.dataset.swipedAway;
+      else if (nav.dataset.swipedAway) {
+        /* swiped away by hand (js/nav.js): only scrolling up brings it back,
+           ignoring the bounce right after the swipe */
+        if (y < lastY - 4 && !(window.mvNavRecentlySwiped && window.mvNavRecentlySwiped())) {
+          nav.classList.remove("nav--hidden"); delete nav.dataset.swipedAway;
+        }
       }
+      else if (y < lastY - 4 || y <= 240) nav.classList.remove("nav--hidden");
       nav.classList.toggle("nav--scrolled", y > 10);
     }
     lastY = y;
