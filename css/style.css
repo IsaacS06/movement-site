@@ -944,11 +944,13 @@ a.way{color:inherit}
 .team h3{font-size:clamp(20px,1.9vw,24px)}
 .team p{font-size:14.5px;color:var(--ink2);line-height:1.55}
 .team .way-link{margin-top:auto}
-.team--photo{grid-row:span 2;background-color:var(--ink);background-size:cover;background-position:center;border:none;color:#fff;justify-content:flex-end}
+.team--photo{min-height:340px;background-color:var(--ink);background-size:cover;background-position:center;border:none;color:#fff;justify-content:flex-end}
 .team--photo::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(10,12,14,.92) 30%,rgba(10,12,14,.2) 75%)}
 .team--photo p{color:rgba(255,255,255,.85)}
+.team--wide{grid-column:span 2}
+.team--photo .way-link{color:#8fe8e0}
 @media (max-width:1000px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.team-grid{grid-template-columns:1fr}.team--photo{grid-row:auto;min-height:340px}}
+@media (max-width:560px){.team-grid{grid-template-columns:1fr}.team--wide{grid-column:auto}}
 
 /* -- kids -- */
 /* the logo's MOVEMENT is white, so it sits on a dark badge */
