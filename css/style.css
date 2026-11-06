@@ -5,8 +5,10 @@
    value there and it updates everywhere on the site.
    ============================================================ */
 
-/* == deliberate single-theme: bright, photographic, always light == */
+/* == light theme by default; a dark theme follows the visitor's device setting (see DARK MODE below) == */
 :root{
+  color-scheme:light dark;
+  --on-accent:#fff;        /* text on --teal / --hot backgrounds */
   --paper:#f6f7f5;
   --paper2:#eceee9;
   --paper3:#e1e4de;
@@ -16,7 +18,9 @@
   --line:#d7dbd5;
   --teal:#0d8b84;
   --teal-soft:#d3efec;
+  --teal-light:#8fe8e0;    /* for text on dark backgrounds */
   --hot:#ff5a3c;
+  --hot-soft:#ffd3c6;
   --shadow:0 18px 50px -18px rgba(18,22,26,.28);
 
   --disp:"Bricolage Grotesque","Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -63,7 +67,7 @@ p{margin:0}
 .pill--hot:hover{background:var(--ink);border-color:var(--ink)}
 
 /* == NAV == */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:70;background:rgba(246,247,245,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:70;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav-in{max-width:var(--maxw);margin-inline:auto;padding-inline:var(--gut);display:flex;align-items:center;gap:20px;min-height:68px}
 .nav-logo{display:flex;align-items:center;gap:10px;flex:none}
 .nav-logo img{width:32px;height:32px;object-fit:contain}
@@ -264,7 +268,7 @@ html.word-tick .word-layer{   /* on the layers, not .word, so the letters' extra
 .band-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,12,14,.9) 5%,rgba(9,12,14,.25) 60%,rgba(9,12,14,.45) 100%)}
 .band-in{position:relative;max-width:var(--maxw);margin-inline:auto;padding:clamp(30px,5vw,68px) var(--gut);width:100%;color:#fff}
 .band-in q{quotes:none;display:block;font-family:var(--disp);font-weight:700;font-size:clamp(22px,3.6vw,50px);line-height:1.12;letter-spacing:-.03em;max-width:21ch}
-.band-in q em{font-style:normal;color:#8fe8e0}
+.band-in q em{font-style:normal;color:var(--teal-light)}
 .band-cite{margin-top:18px;font-size:13.5px;letter-spacing:.11em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,.7)}
 
 /* == TILES == */
@@ -280,7 +284,7 @@ html.word-tick .word-layer{   /* on the layers, not .word, so the letters' extra
 .tile:hover .tile-img img{transform:scale(1.06)}
 .tile-img::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,12,14,.88) 8%,rgba(9,12,14,.1) 62%)}
 .tile-cap{position:absolute;left:0;right:0;bottom:0;padding:18px;color:#fff;z-index:2}
-.tile-age{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8fe8e0}
+.tile-age{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-light)}
 .tile-cap h3{font-size:clamp(19px,2.1vw,25px);margin-top:5px}
 .tile-more{
   display:block;max-height:0;overflow:hidden;
@@ -288,7 +292,7 @@ html.word-tick .word-layer{   /* on the layers, not .word, so the letters' extra
 }
 .tile[aria-expanded="true"] .tile-more{max-height:190px}
 .tile-more p{font-size:14.5px;color:rgba(255,255,255,.88);line-height:1.5;padding-top:10px}
-.tile-more span{display:inline-flex;align-items:center;gap:7px;margin-top:11px;font-size:13px;font-weight:700;color:#8fe8e0}
+.tile-more span{display:inline-flex;align-items:center;gap:7px;margin-top:11px;font-size:13px;font-weight:700;color:var(--teal-light)}
 .tile-plus{
   position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;z-index:2;
   background:rgba(255,255,255,.94);color:var(--ink);display:grid;place-items:center;
@@ -398,7 +402,7 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 .ticker-track{display:flex;width:max-content;animation:ticker 38s linear infinite}
 .ticker span{font-family:var(--disp);font-weight:700;font-size:clamp(18px,2.2vw,26px);letter-spacing:-.02em;white-space:nowrap;display:flex;align-items:center}
 .ticker span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--hot);margin-inline:clamp(18px,2.4vw,30px)}
-.ticker span:nth-child(even)::after{background:#8fe8e0}
+.ticker span:nth-child(even)::after{background:var(--teal-light)}
 @keyframes ticker{to{transform:translateX(-50%)}}
 /* scrolling banners pause while hovered or keyboard-focused (WCAG 2.2.2) */
 .ticker:hover .ticker-track,.ticker:focus .ticker-track,.y-marquee:hover .y-marquee-track,.y-marquee:focus .y-marquee-track,.y-hero:hover .y-badge svg,.y-hero:focus-within .y-badge svg{animation-play-state:paused}
@@ -448,7 +452,7 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 /* -- dark section (next steps) -- */
 .dark{background:var(--ink);color:var(--paper);overflow:hidden}
 .dark .sec-head .sub{color:rgba(246,247,245,.72)}
-.dark .kick{color:#8fe8e0}
+.dark .kick{color:var(--teal-light)}
 
 /* -- next steps journey --
    Without JS (no .is-ready): track + buttons hidden, all four steps stacked.
@@ -459,11 +463,11 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 .journey.is-ready .journey-nav{display:flex}
 
 .track-ends{justify-content:space-between;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,247,245,.5);margin-bottom:14px}
-.track-ends span:last-child{color:#8fe8e0}
+.track-ends span:last-child{color:var(--teal-light)}
 .track{position:relative;grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:clamp(30px,4vw,48px)}
 /* the line runs from the centre of the first dot to the centre of the last */
 .track-line{position:absolute;left:12.5%;right:12.5%;top:27px;height:4px;border-radius:4px;background:rgba(246,247,245,.14)}
-.track-fill{position:absolute;inset:0 auto 0 0;width:0;border-radius:4px;background:linear-gradient(90deg,var(--hot),#8fe8e0);transition:width .6s cubic-bezier(.2,.8,.3,1)}
+.track-fill{position:absolute;inset:0 auto 0 0;width:0;border-radius:4px;background:linear-gradient(90deg,var(--hot),var(--teal-light));transition:width .6s cubic-bezier(.2,.8,.3,1)}
 .stop{position:relative;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;padding:0 6px;color:rgba(246,247,245,.55);transition:color .2s ease}
 .stop-dot{
   width:58px;height:58px;border-radius:50%;display:grid;place-items:center;position:relative;z-index:1;
@@ -499,7 +503,7 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
   font-family:var(--disp);font-weight:800;font-size:clamp(90px,12vw,170px);line-height:.8;letter-spacing:-.06em;
   color:var(--hot);filter:url(#outlineText);   /* outline via the filter in about.html */
 }
-.step:nth-of-type(even) .step-n{color:#8fe8e0}
+.step:nth-of-type(even) .step-n{color:var(--teal-light)}
 .step-of{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--hot)}
 .step-of span{color:rgba(246,247,245,.45)}
 .step-body h3{font-size:clamp(30px,4.2vw,54px);line-height:1;letter-spacing:-.04em;margin:14px 0 18px}
@@ -547,6 +551,11 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 .timeline li:nth-child(3)::before{background:var(--ink)}
 .timeline b{display:block;font-family:var(--disp);font-size:clamp(26px,3vw,38px);letter-spacing:-.035em;line-height:1}
 .timeline span{display:block;margin-top:8px;color:var(--ink2);font-size:15.5px;line-height:1.45}
+.history-video{margin:clamp(40px,5vw,64px) 0 0}
+.history-video-frame{position:relative;aspect-ratio:16/9;border-radius:22px;overflow:hidden;background:var(--ink);box-shadow:var(--shadow)}
+.history-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.history-video figcaption{margin-top:12px;color:var(--ink3);font-size:15px}
+.history-video figcaption b{color:var(--ink)}
 @media (max-width:860px){.history{grid-template-columns:1fr}}
 @media (max-width:560px){.timeline{grid-template-columns:1fr;gap:6px}}
 
@@ -733,7 +742,7 @@ html.has-intro .nav-logo img{visibility:hidden;animation:introFailsafeShow 0s 4.
 @media (max-width:820px){.impact{grid-template-columns:1fr}.impact:nth-child(even) .impact-img{order:0}}
 
 /* -- accountability box + FAQ email link -- */
-.account .kick{color:#8fe8e0}
+.account .kick{color:var(--teal-light)}
 .account h2{margin-top:12px}
 .account p + p{margin-top:10px}
 .inline-link{color:var(--teal);font-weight:700;text-decoration:underline;text-underline-offset:3px}
@@ -767,7 +776,7 @@ html.has-intro .nav-logo img{visibility:hidden;animation:introFailsafeShow 0s 4.
 .map-room--other{fill:#f6f6f3}
 .map-room--staff{fill:#e4e6e1}
 .map-room.is-hover{stroke:var(--teal)}
-.map-room.is-on{fill:#ffd3c6;stroke:var(--hot)}
+.map-room.is-on{fill:var(--hot-soft);stroke:var(--hot)}
 /* labels: one style everywhere; the two big rooms get the display face */
 .map-label{font-family:var(--body);font-size:24px;font-weight:600;fill:#2c3439;pointer-events:none;transition:fill .2s ease}
 .map-label--worship{font-size:42px;font-family:var(--disp);font-weight:800;fill:var(--ink);letter-spacing:-.02em}
@@ -848,7 +857,7 @@ html.has-intro .nav-logo img{visibility:hidden;animation:introFailsafeShow 0s 4.
 .online p{color:rgba(246,247,245,.72);margin-top:14px;font-size:17px;max-width:44ch}
 .online-ghost{color:var(--paper);border-color:rgba(246,247,245,.35)}
 .online-ghost:hover{background:var(--paper);color:var(--ink);border-color:var(--paper)}
-.final-kick{color:#8fe8e0}
+.final-kick{color:var(--teal-light)}
 .final .final-kick + h2{margin-top:12px}
 
 /* -- shape editor (visit.html?edit) - for whoever looks after the map -- */
@@ -862,7 +871,7 @@ html.has-intro .nav-logo img{visibility:hidden;animation:introFailsafeShow 0s 4.
   display:flex;flex-direction:column;gap:8px;font-size:14px;
 }
 .map-editor p{color:rgba(246,247,245,.7);line-height:1.4}
-.map-editor code{display:block;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 10px;font-size:12.5px;word-break:break-all;color:#8fe8e0}
+.map-editor code{display:block;background:rgba(255,255,255,.08);border-radius:8px;padding:8px 10px;font-size:12.5px;word-break:break-all;color:var(--teal-light)}
 .map-editor code:empty{display:none}
 .map-editor-btns{display:flex;gap:8px;margin-top:4px}
 .map-editor-btns button{background:rgba(255,255,255,.12);border-radius:999px;padding:7px 14px;font-weight:700;font-size:13px}
@@ -900,7 +909,7 @@ a.way{color:inherit}
 .way--alert .pill{background:var(--hot);border-color:var(--hot);color:#fff}
 .way--feature-dark{background:var(--ink);border-color:var(--ink);color:var(--paper)}
 .way--feature-dark p{color:rgba(246,247,245,.75)}
-.way--feature-dark .way-link{color:#8fe8e0}
+.way--feature-dark .way-link{color:var(--teal-light)}
 .sec-head--wide{max-width:none}
 .sec-head--wide .sub{max-width:60ch}
 .band-cta{margin-top:24px}
@@ -949,7 +958,7 @@ a.way{color:inherit}
 .team--photo::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(10,12,14,.92) 30%,rgba(10,12,14,.2) 75%)}
 .team--photo p{color:rgba(255,255,255,.85)}
 .team--wide{grid-column:span 2}
-.team--photo .way-link{color:#8fe8e0}
+.team--photo .way-link{color:var(--teal-light)}
 @media (max-width:1000px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:560px){.team-grid{grid-template-columns:1fr}.team--wide{grid-column:auto}}
 
@@ -979,7 +988,7 @@ a.way{color:inherit}
 .bap-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.75}
 .bap-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(9,12,14,.9) 5%,rgba(9,12,14,.1) 70%)}
 .bap-hero-in{position:relative;z-index:1;padding-block:clamp(36px,6vw,80px);color:#fff;display:flex;flex-direction:column;align-items:flex-start;gap:18px;width:100%}
-.bap-hero-in .kick{color:#8fe8e0}
+.bap-hero-in .kick{color:var(--teal-light)}
 .bap-hero-in h1{font-size:clamp(56px,11vw,150px);line-height:.88;letter-spacing:-.05em}
 .bap-hero-in h1 span{display:block}
 .bap-intro{max-width:820px;margin-inline:auto;display:flex;flex-direction:column;gap:clamp(22px,3vw,34px)}
@@ -1001,6 +1010,56 @@ a.way{color:inherit}
 .bap-side{margin-top:24px;border-radius:20px;width:100%;max-width:380px;aspect-ratio:4/5;object-fit:cover}
 @media (max-width:900px){.bap-side{display:none}}
 @media (max-width:620px){.bap-moments{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.bap-clip{border-radius:14px}.bap-testimonies img{aspect-ratio:16/10}}
+
+/* ============================================================
+   DARK MODE - follows the visitor's device setting.
+   Page colours flip; sections that are already dark (bands,
+   closing boxes, cookie banner, photo cards...) get the light-mode
+   colours back so they look the same as always, lifted a little
+   off the page. The youth pages keep their own dark look.
+   Contrast (WCAG AA) on the dark page #15181c: text 15.5:1,
+   --ink2 9.7:1, --ink3 6.9:1, teal 7.1:1, orange 7.0:1;
+   dark text on teal/orange buttons 7.3:1 / 7.2:1.
+   ============================================================ */
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#15181c;--paper2:#1d2126;--paper3:#262b31;
+    --ink:#eef0ec;--ink2:#b9c0c5;--ink3:#9aa3a9;--line:#30363d;
+    --teal:#14b7ad;--teal-soft:#183a38;--hot:#ff7c5c;--hot-soft:#4a2a22;--on-accent:#12161a;
+    --shadow:0 18px 50px -18px rgba(0,0,0,.6);
+  }
+  /* exactly as in light mode */
+  :where(.youth-page,.intro,.map-frame){
+    --paper:#f6f7f5;--paper2:#eceee9;--paper3:#e1e4de;--ink:#12161a;--ink2:#535d63;--ink3:#646d73;--line:#d7dbd5;
+    --teal:#0d8b84;--teal-soft:#d3efec;--hot:#ff5a3c;--hot-soft:#ffd3c6;--on-accent:#fff;
+    --shadow:0 18px 50px -18px rgba(18,22,26,.28);
+  }
+  /* always-dark surfaces: light-mode colours, with the dark lifted off the page */
+  :where(.dark,.final,.ticker,.way--alert,.way--feature,.way--feature-dark,.ready,.consent,.toast,
+         .map-editor,.skip-link,.kids-logo,.bap-hero,.team--photo,.tile,.value,.rail-item,.book,.lb){
+    --paper:#f6f7f5;--paper2:#eceee9;--paper3:#e1e4de;--ink:#12161a;--ink2:#535d63;--ink3:#646d73;--line:#d7dbd5;
+    --teal:#0d8b84;--teal-soft:#d3efec;--hot:#ff5a3c;--hot-soft:#ffd3c6;--on-accent:#fff;
+    --shadow:0 18px 50px -18px rgba(18,22,26,.28);
+    --ink:#20262d;
+  }
+  .map-frame{color:var(--ink)}
+  /* black logo turns white */
+  .nav-logo img,.foot-id img{filter:invert(1)}
+  /* brighter photos inside the big home-page word so it reads on the dark page
+     (!important beats the light-mode photos set inline in index.html) */
+  .word-layer:nth-child(1){background-image:url('../img/word-light-1.webp')!important}
+  .word-layer:nth-child(2){background-image:url('../img/word-light-2.webp')!important}
+  .word-layer:nth-child(3){background-image:url('../img/word-light-3.webp')!important}
+  .word-layer:nth-child(4){background-image:url('../img/word-light-4.webp')!important}
+  .word-layer:nth-child(5){background-image:url('../img/word-light-5.webp')!important}
+  .intro.is-leaving .intro-flood{flood-color:#eef0ec}   /* matches the white nav logo */
+  /* accent badges and buttons that sit on the page */
+  .pill--hot,.collage-badge,.card-img .badge,.socs a:hover,.faq details[open] summary::after,
+  .give-sticker,.copy.is-copied,.res-alert{color:var(--on-accent)}
+  .place-btn[aria-pressed="true"]{color:var(--paper)}
+  .place-tag--welcome{color:var(--hot)}
+  .place-tag--kids{color:#f2c46b}
+}
 
 /* ============================================================
    YOUTH PAGE (youth.html) - its own look: dark, neon purple and
@@ -1235,7 +1294,7 @@ main{display:block;position:relative}
 .consent[hidden]{display:none}
 .consent p{font-size:14.5px;line-height:1.5;flex:1 1 320px;color:rgba(246,247,245,.85)}
 .consent strong{color:#fff}
-.consent a{color:#8fe8e0;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.consent a{color:var(--teal-light);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .consent-btns{display:flex;gap:8px}
 .consent .pill{padding:11px 20px;background:var(--paper);color:var(--ink);border-color:var(--paper)}
 .consent .pill:hover{background:var(--hot);border-color:var(--hot);color:#fff}
@@ -1305,7 +1364,7 @@ main{display:block;position:relative}
 .ready > .loop-btn{right:var(--gut);bottom:18px}
 .ready-in{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(26px,4vw,64px);align-items:center;padding-block:clamp(60px,9vw,120px)}
 .ready-txt{display:flex;flex-direction:column;gap:14px}
-.ready-txt .kick{color:#8fe8e0}
+.ready-txt .kick{color:var(--teal-light)}
 .ready-txt h2{font-size:clamp(32px,4.8vw,58px);line-height:1}
 .ready-txt p{color:rgba(246,247,245,.78);font-size:17px;line-height:1.6;max-width:44ch}
 .ready-txt .final-btns{margin-top:8px}
@@ -1343,7 +1402,7 @@ main{display:block;position:relative}
 .toast--success svg{color:#7ee2b0}
 .toast--error{background:#8f1d0f}
 .toast--error svg{color:#ffd0c4}
-.toast--info svg{color:#8fe8e0}
+.toast--info svg{color:var(--teal-light)}
 .toast-msg{flex:1;word-break:break-word}
 .toast-x{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:13px;color:rgba(255,255,255,.75)}
 .toast-x:hover{background:rgba(255,255,255,.12);color:#fff}

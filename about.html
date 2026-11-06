@@ -19,7 +19,9 @@
 
 <link rel="icon" href="img/logo.png">
 <link rel="canonical" href="https://www.wearemovement.ca/about.html">
-<meta name="theme-color" content="#f6f7f5">
+<meta name="theme-color" content="#f6f7f5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15181c" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
 <link rel="apple-touch-icon" href="img/logo.png">
 
 <!-- Fonts (self-hosted copies of Bricolage Grotesque & Figtree; see fonts/) -->
@@ -34,7 +36,7 @@
 
 <!-- Styles -->
 <!-- bump every ?v= number (css and js, all pages) after changing them so browsers fetch the new versions -->
-<link rel="stylesheet" href="css/style.css?v=21">
+<link rel="stylesheet" href="css/style.css?v=25">
 <!-- Structured data for search engines -->
 <script type="application/ld+json">
 {
@@ -353,6 +355,14 @@
     <li><b>2020</b><span>Renamed Movement Church</span></li>
     <li><b>Today</b><span>Grown from 300 to over 1,000 in a decade</span></li>
   </ol>
+
+  <!-- History video (privacy-enhanced YouTube embed; listed in privacy.html) -->
+  <figure class="history-video reveal">
+    <div class="history-video-frame">
+      <iframe src="https://www.youtube-nocookie.com/embed/64Kxo8Bwdck?rel=0" title="The History of a Movement" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <figcaption>Watch: <b>The History of a Movement</b></figcaption>
+  </figure>
 </section>
 
 
@@ -533,7 +543,7 @@
 <script src="js/toast.js?v=13"></script>
 <script src="js/consent.js?v=13"></script>
 <script src="js/nav.js?v=16"></script>
-<script src="js/intro.js?v=13"></script>
+<script src="js/intro.js?v=14"></script>
 <!-- about.js runs the Next Steps journey and the MOVEMENT letters -->
 <script src="js/about.js?v=13"></script>
 <!-- pause/play and "Sound on" buttons for the videos -->
